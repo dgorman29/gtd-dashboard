@@ -1,0 +1,2858 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="d25b3531-3d95-44f3-8339-16591b5f6ec0"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+<style>/* Organic — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
+/* latin-ext */
+@font-face {
+  font-family: 'Caprasimo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e6a88b07-caf8-4bb2-a6f8-57fd42c105d5") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caprasimo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a0bb7cb1-eb89-421e-b4f2-722351786953") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f85b8fa1-2d4c-461b-94c5-523f95bb2496") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6dc282c4-2ed5-4125-b165-6c89f77317ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("f85b8fa1-2d4c-461b-94c5-523f95bb2496") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("6dc282c4-2ed5-4125-b165-6c89f77317ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("f85b8fa1-2d4c-461b-94c5-523f95bb2496") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("6dc282c4-2ed5-4125-b165-6c89f77317ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+:root {
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-text: #201e1d;
+  --color-accent: #c67139;
+  --color-accent-2: #7a8a5e;
+  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+
+  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
+     same step of any role matches the others in visual value. */
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-neutral-400: #c0b6a5;
+  --color-neutral-500: #a19786;
+  --color-neutral-600: #82796a;
+  --color-neutral-700: #645c50;
+  --color-neutral-800: #474238;
+  --color-neutral-900: #2e2b25;
+
+  --color-accent-100: #fff2eb;
+  --color-accent-200: #ffe1d0;
+  --color-accent-300: #ffc6a5;
+  --color-accent-400: #f6a06b;
+  --color-accent-500: #d67f48;
+  --color-accent-600: #b2622d;
+  --color-accent-700: #8c491a;
+  --color-accent-800: #643312;
+  --color-accent-900: #402310;
+
+  --color-accent-2-100: #f0fae1;
+  --color-accent-2-200: #e1eecc;
+  --color-accent-2-300: #ccdbb2;
+  --color-accent-2-400: #aebf92;
+  --color-accent-2-500: #8fa073;
+  --color-accent-2-600: #728157;
+  --color-accent-2-700: #56633f;
+  --color-accent-2-800: #3d472b;
+  --color-accent-2-900: #272e1b;
+
+  --font-heading: "Caprasimo", system-ui, sans-serif;
+  --font-heading-weight: 400;
+  --font-body: "Figtree", system-ui, sans-serif;
+
+  --space-1: 4.4px;
+  --space-2: 8.8px;
+  --space-3: 13.2px;
+  --space-4: 17.6px;
+  --space-6: 26.4px;
+  --space-8: 35.2px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Elevation — derived from the ground: soft ink-tinted shadows on a
+     light theme, a hairline edge + ambient darkness on a dark one. */
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+
+.washed{filter:saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94)}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Components — built with the tokens above. Plain CSS
+   on plain HTML: no JavaScript, no build step. Each class is documented in
+   readme.md and demonstrated in foundations/ and components/.
+   ══════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+h6 { letter-spacing: 0.08em; text-transform: uppercase; }
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px; margin-top: var(--space-1);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* — rules — */
+.hr {
+  height: 1px; border: 0; margin: var(--space-4) 0;
+  background: var(--color-divider);
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; line-height: 1.2; color: var(--color-text); /* matches the .input's 14px —
+     the pair sits side by side in sign-up rows */
+  background: transparent; border: 1px solid transparent;
+  padding: var(--space-2) calc(var(--space-3) * 1.2);
+  border-radius: var(--radius-md);
+}
+.btn svg { display: block; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-bg); }
+.btn-primary:hover { background: var(--color-accent-600); }
+.btn-primary:active { background: var(--color-accent-700); }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.btn-icon { width: 36px; height: 36px; padding: 0; }
+.btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* — forms — */
+.field > label {
+  display: block; font-size: 12px; margin-bottom: 5px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+.input {
+  width: 100%; min-height: 36px; padding: 6px 10px; font: inherit;
+  font-size: 14px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.input:hover { border-color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+textarea.input { min-height: 90px; resize: vertical; }
+.radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.radio input, .seg-opt input {
+  position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.radio .dot {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  border: 1.5px solid var(--color-divider);
+}
+.radio:hover .dot { border-color: var(--color-accent); }
+.radio input:checked + .dot {
+  border-color: var(--color-accent); background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+.radio input:focus-visible + .dot { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.seg {
+  display: inline-flex; overflow: hidden;
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.seg-opt {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; font-size: 13px; cursor: pointer;
+}
+.seg-opt + .seg-opt { border-left: 1px solid var(--color-divider); }
+.seg-opt:has(input:checked) { background: var(--color-accent); color: var(--color-bg); }
+.seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.seg-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+
+/* — cards — */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
+}
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 17px; line-height: 1.2;
+}
+.card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
+.card-meta {
+  display: flex; align-items: center; gap: 6px; font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.elev-sm { box-shadow: var(--shadow-sm); }
+.elev-md { box-shadow: var(--shadow-md); }
+.elev-lg { box-shadow: var(--shadow-lg); }
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px;
+  letter-spacing: 0.02em; padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
+.tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+.tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+
+/* — navigation — */
+.nav {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: none;
+}
+.nav-brand {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 18px; margin-right: auto;
+}
+.nav a { color: inherit; text-decoration: none; font-size: 14px; }
+.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+
+/* — tables — */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2); border-bottom: 1px solid var(--color-divider);
+}
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+
+/* — dialog — */
+.dialog-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
+}
+.dialog {
+  width: min(440px, 100%); display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-lg);
+}
+.dialog-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px;
+}
+.dialog-body { font-size: 14px; opacity: 0.85; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* — rounded frame: everything softens, small controls go pill — */
+.card, .dialog { border-radius: calc(var(--radius-lg) * 1.15); }
+.btn, .tag, .seg, .input { border-radius: 999px; }
+.input { padding-inline: 14px; }
+
+</style>
+<script src="77df49be-473c-40ce-a5bf-902fc63aa1c0"></script>
+<style>
+/* arabic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3242d4fa-329a-48cb-88c0-4ebcc34d1ae6") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3680a54b-c993-4845-98f0-e93d0fcdc6ca") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("7b938ce4-45b2-4849-b7a3-1098eafef475") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2413a642-a69b-4a53-a349-b47ff2303771") format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("0f3b515b-7e39-47a6-ae96-679d50f8b9ac") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b610084e-d30f-48a2-97f3-9e6e620d3a6a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("3242d4fa-329a-48cb-88c0-4ebcc34d1ae6") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("3680a54b-c993-4845-98f0-e93d0fcdc6ca") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("7b938ce4-45b2-4849-b7a3-1098eafef475") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("2413a642-a69b-4a53-a349-b47ff2303771") format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("0f3b515b-7e39-47a6-ae96-679d50f8b9ac") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("b610084e-d30f-48a2-97f3-9e6e620d3a6a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("3242d4fa-329a-48cb-88c0-4ebcc34d1ae6") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("3680a54b-c993-4845-98f0-e93d0fcdc6ca") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("7b938ce4-45b2-4849-b7a3-1098eafef475") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("2413a642-a69b-4a53-a349-b47ff2303771") format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("0f3b515b-7e39-47a6-ae96-679d50f8b9ac") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("b610084e-d30f-48a2-97f3-9e6e620d3a6a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{--font-heading:"Rubik",system-ui,sans-serif;--font-heading-weight:600}
+html,body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)}
+h1,h2,h3,h4,h5,h6{letter-spacing:-.02em}
+.btn,.input,select.input,textarea.input,.card,.tag{border-radius:7px}
+@keyframes pop{0%{transform:scale(.6)}55%{transform:scale(1.18)}100%{transform:scale(1)}}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 var(--color-accent-300)}50%{box-shadow:0 0 0 10px transparent}}
+a{color:var(--color-accent-700)}
+a:hover{color:var(--color-accent)}
+</style>
+</helmet>
+
+<div style="--tile:{{ tileMin }};min-height:100vh;padding:26px 30px 90px">
+<div style="max-width:1280px;margin:0 auto">
+
+  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px">
+    <div style="display:flex;align-items:center;gap:11px">
+      <div style="width:38px;height:38px;border-radius:7px;background:var(--color-accent-2-500)"></div>
+      <div>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:23px;line-height:1.05">Mind Like Water</div>
+        <div style="font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--color-neutral-700)">{{ todayLine }}</div>
+      </div>
+    </div>
+    <div style="flex:1"></div>
+    <button sc-camel-on-click="{{ dayBtns.onStart }}" class="btn btn-secondary" style="gap:8px">{{ dayBtns.startLabel }}</button>
+    <button sc-camel-on-click="{{ dayBtns.onWrap }}" class="btn btn-secondary" style="gap:8px">{{ dayBtns.wrapLabel }}</button>
+    <button sc-camel-on-click="{{ onFocus }}" class="btn btn-secondary" style="gap:8px">◎ Focus mode</button>
+    <button sc-camel-on-click="{{ reviewChip.onClick }}" class="btn" style="background:{{ reviewChip.bg }};color:{{ reviewChip.fg }};gap:8px">{{ reviewChip.label }}</button>
+  </div>
+
+  <div style="display:flex;gap:10px;align-items:center;background:var(--color-accent-100);border:1px solid var(--color-accent-200);border-radius:7px;padding:8px 8px 8px 22px;box-shadow:var(--shadow-sm);margin-bottom:18px">
+    <input value="{{ cap }}" sc-camel-on-change="{{ onCapChange }}" sc-camel-on-key-down="{{ onCapKey }}" placeholder="What's on your mind? Capture it here — don't categorize yet" autocomplete="off" style="flex:1;border:none;background:transparent;font-family:var(--font-body);font-size:16px;color:var(--color-text);outline:none;padding:8px 0">
+    <button sc-camel-on-click="{{ onCapture }}" class="btn btn-primary" style="padding:11px 22px;font-size:15px">Capture</button>
+  </div>
+
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--color-neutral-700);margin:-6px 0 18px;padding:0 4px">
+    <span style="font-size:11px;letter-spacing:.09em;text-transform:uppercase">This week</span>
+    <sc-for list="{{ weekStrip.items }}" as="o" hint-placeholder-count="2">
+      <span style="padding:3px 10px;border-radius:7px;background:var(--color-accent-2-100);color:var(--color-accent-2-800);overflow-wrap:anywhere">{{ o.text }}</span>
+    </sc-for>
+    <sc-if value="{{ weekStrip.empty }}" hint-placeholder-val="{{ false }}">
+      <span>no outcomes set</span>
+    </sc-if>
+    <button sc-camel-on-click="{{ weekStrip.onEdit }}" style="border:none;background:transparent;color:var(--color-accent-700);cursor:pointer;font-family:var(--font-body);font-size:12.5px;padding:2px 4px;text-decoration:underline">{{ weekStrip.editLabel }}</button>
+    <sc-if value="{{ todayMove.visible }}" hint-placeholder-val="{{ false }}">
+      <span style="flex:1"></span>
+      <button sc-camel-on-click="{{ todayMove.onClick }}" style="border:none;background:transparent;color:var(--color-neutral-800);cursor:pointer;font-family:var(--font-body);font-size:12.5px;padding:2px 4px;text-align:left;overflow-wrap:anywhere">{{ todayMove.label }}</button>
+    </sc-if>
+  </div>
+
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:22px">
+    <sc-for list="{{ navPrimary }}" as="n" hint-placeholder-count="4">
+      <button sc-camel-on-click="{{ n.onClick }}" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;padding:9px 18px;border-radius:7px;cursor:pointer;font-family:var(--font-heading);font-weight:600;border:1px solid {{ n.border }};background:{{ n.bg }};color:{{ n.fg }}">
+        {{ n.label }}
+        <sc-if value="{{ n.count }}" hint-placeholder-val="{{ true }}">
+          <span style="min-width:19px;height:19px;padding:0 6px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-family:var(--font-body);font-weight:700;background:{{ n.badgeBg }};color:{{ n.badgeFg }}">{{ n.count }}</span>
+        </sc-if>
+      </button>
+    </sc-for>
+    <span style="width:1px;height:24px;background:var(--color-divider);margin:0 6px"></span>
+    <sc-for list="{{ navSecondary }}" as="n" hint-placeholder-count="6">
+      <button sc-camel-on-click="{{ n.onClick }}" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:8px 15px;border-radius:7px;cursor:pointer;font-family:var(--font-body);border:1px solid {{ n.border }};background:{{ n.bg }};color:{{ n.fg }}">
+        {{ n.label }}
+        <sc-if value="{{ n.count }}" hint-placeholder-val="{{ true }}">
+          <span style="font-size:11px;font-weight:700;opacity:.75">{{ n.count }}</span>
+        </sc-if>
+      </button>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ addForm.visible }}" hint-placeholder-val="{{ false }}">
+    <div style="background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:20px 22px;margin-bottom:20px;box-shadow:var(--shadow-md);animation:rise .2s ease">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:19px;margin-bottom:14px">{{ addForm.title }}</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:16px">
+        <sc-for list="{{ addForm.fields }}" as="f" hint-placeholder-count="2">
+          <div>
+            <label style="display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--color-neutral-700);margin-bottom:5px">{{ f.label }}</label>
+            <sc-if value="{{ f.isSelect }}" hint-placeholder-val="{{ false }}">
+              <sc-raw-select class="input" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}">
+                <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="2">
+                  <option value="{{ o.value }}">{{ o.label }}</option>
+                </sc-for>
+              </sc-raw-select>
+            </sc-if>
+            <sc-if value="{{ f.isArea }}" hint-placeholder-val="{{ false }}">
+              <textarea class="input" style="min-height:76px;border-radius:5px" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}" placeholder="{{ f.placeholder }}"></textarea>
+            </sc-if>
+            <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
+              <input class="input" type="{{ f.type }}" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}" sc-camel-on-key-down="{{ addForm.onKey }}" placeholder="{{ f.placeholder }}">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button sc-camel-on-click="{{ addForm.onSubmit }}" class="btn btn-primary">{{ addForm.submitLabel }}</button>
+        <button sc-camel-on-click="{{ addForm.onCancel }}" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isEngage }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.1;margin:4px 0 22px">{{ greeting }}</div>
+
+    <sc-if value="{{ suggestion.visible }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;background:var(--color-accent-2-200);border-radius:6px;padding:24px 28px;margin-bottom:26px;box-shadow:var(--shadow-sm)">
+        <div style="flex:1;min-width:260px">
+          <div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-2-800);margin-bottom:8px">Do this now</div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.2">{{ suggestion.text }}</div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--color-neutral-800)">
+            <span style="padding:3px 11px;border-radius:7px;background:{{ suggestion.ctxBg }};color:{{ suggestion.ctxFg }}">{{ suggestion.ctx }}</span>
+            <sc-if value="{{ suggestion.project }}" hint-placeholder-val="{{ false }}"><span>{{ suggestion.project }}</span></sc-if>
+            <span>{{ suggestion.why }}</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;min-width:150px">
+          <button sc-camel-on-click="{{ suggestion.onDo }}" class="btn btn-primary" style="padding:12px 20px">Did it</button>
+          <button sc-camel-on-click="{{ suggestion.onSkip }}" class="btn btn-secondary">Something else →</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:26px;align-items:start">
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:12px">
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">Next actions</div>
+          <div style="font-size:12.5px;color:var(--color-neutral-700)">what can I do right now?</div>
+        </div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px">
+          <sc-for list="{{ ctxChips }}" as="c" hint-placeholder-count="5">
+            <button sc-camel-on-click="{{ c.onClick }}" style="display:inline-flex;align-items:center;gap:7px;font-size:12.5px;padding:7px 14px;border-radius:7px;cursor:pointer;font-family:var(--font-body);border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.fg }}">
+              <span style="width:8px;height:8px;border-radius:7px;background:{{ c.dot }}"></span>{{ c.label }}
+            </button>
+          </sc-for>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+          <sc-for list="{{ engageActions }}" as="a" hint-placeholder-count="6">
+            <div draggable="{{ true }}" sc-camel-on-drag-start="{{ a.onDragStart }}" sc-camel-on-drag-over="{{ a.onDragOver }}" sc-camel-on-drop="{{ a.onDrop }}" sc-camel-on-drag-end="{{ a.onDragEnd }}" style="display:flex;flex-direction:column;gap:11px;background:var(--color-neutral-100);border:1px solid {{ a.edge }};border-radius:5px;padding:15px 17px;box-shadow:var(--shadow-sm);cursor:grab;opacity:{{ a.opacity }}" style-hover="box-shadow:var(--shadow-md)">
+              <div style="display:flex;gap:11px;align-items:flex-start">
+                <button sc-camel-on-click="{{ a.onToggle }}" style="width:23px;height:23px;flex:none;margin-top:1px;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid {{ a.cbEdge }};background:{{ a.cbBg }};color:{{ a.cbInk }};font-size:13px;line-height:1;display:grid;place-items:center">✓</button>
+                <div style="flex:1;min-width:0;font-size:15px;line-height:1.42;font-weight:600;overflow-wrap:anywhere">{{ a.text }}</div>
+                <button sc-camel-on-click="{{ a.onDelete }}" title="Delete" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+              </div>
+              <div style="display:flex;gap:7px;align-items:center;flex-wrap:wrap">
+                <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:{{ a.ctxBg }};color:{{ a.ctxFg }}">{{ a.ctx }}</span>
+                <sc-if value="{{ a.project }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:var(--color-neutral-200);color:var(--color-neutral-800)">{{ a.project }}</span>
+                </sc-if>
+                <span style="margin-left:auto;font-size:11px;color:var(--color-neutral-600)">{{ a.age }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ engageEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:32px;text-align:center;border:1px dashed var(--color-neutral-400);border-radius:6px;color:var(--color-neutral-700)">
+            Nothing queued here. Clear.
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="background:var(--color-surface);border-radius:6px;padding:20px">
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:4px">Today's hard landscape</div>
+          <div style="font-size:12px;color:var(--color-neutral-700);margin-bottom:14px">Only what's day- or time-specific.</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ todayEvents }}" as="e" hint-placeholder-count="2">
+              <div style="display:flex;gap:11px;align-items:flex-start;background:var(--color-neutral-100);border-radius:5px;padding:12px 14px">
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:14px;color:var(--color-accent-700);min-width:52px">{{ e.time }}</div>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:14px;font-weight:600;overflow-wrap:anywhere">{{ e.text }}</div>
+                  <div style="font-size:11px;color:var(--color-neutral-600);margin-top:2px">{{ e.kind }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ noEvents }}" hint-placeholder-val="{{ true }}">
+            <div style="font-size:13.5px;color:var(--color-neutral-700);line-height:1.5">Nothing scheduled. The day is yours to spend on next actions.</div>
+          </sc-if>
+        </div>
+
+        <div style="background:var(--color-accent-100);border-radius:6px;padding:20px">
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:10px">{{ inboxNudge.title }}</div>
+          <div style="font-size:13px;color:var(--color-neutral-800);line-height:1.5;margin-bottom:14px">{{ inboxNudge.body }}</div>
+          <sc-if value="{{ inboxNudge.hasItems }}" hint-placeholder-val="{{ false }}">
+            <button sc-camel-on-click="{{ inboxNudge.onProcess }}" class="btn btn-primary btn-block" style="margin-top:0">Process to zero →</button>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{ hasAgedWaiting }}" hint-placeholder-val="{{ false }}">
+          <div style="background:var(--color-surface);border-radius:6px;padding:20px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:12px">Come due — nudge someone</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <sc-for list="{{ agedWaiting }}" as="w" hint-placeholder-count="2">
+                <div style="display:flex;gap:10px;align-items:flex-start;background:var(--color-accent-200);border-radius:5px;padding:12px 14px">
+                  <button sc-camel-on-click="{{ w.onToggle }}" style="width:21px;height:21px;flex:none;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid var(--color-accent-600);background:transparent;color:transparent;font-size:12px">✓</button>
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:13.5px;font-weight:600;overflow-wrap:anywhere">{{ w.what }}</div>
+                    <div style="font-size:11px;color:var(--color-accent-800);margin-top:3px">{{ w.who }} · since {{ w.age }}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isInbox }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <sc-if value="{{ wizard.visible }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:660px;background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:26px 28px;box-shadow:var(--shadow-md)">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <span style="font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;background:var(--color-accent-200);color:var(--color-accent-800);padding:4px 12px;border-radius:7px">{{ wizard.counter }}</span>
+          <button sc-camel-on-click="{{ wizard.onExit }}" class="btn btn-ghost">Keep in Inbox ✕</button>
+        </div>
+        <sc-if value="{{ wizard.done }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:26px 10px 6px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:24px;margin:10px 0 8px">Inbox zero.</div>
+            <div style="font-size:14px;color:var(--color-neutral-800);line-height:1.55;max-width:420px;margin:0 auto 18px">Every open loop now lives in a trusted place. Mind like water.</div>
+            <button sc-camel-on-click="{{ wizard.onFinish }}" class="btn btn-primary">Back to Engage</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ wizard.hasItem }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;line-height:1.28;margin:16px 0 4px;overflow-wrap:anywhere">{{ wizard.itemText }}</div>
+            <div style="font-size:12px;color:var(--color-neutral-600)">captured {{ wizard.itemAge }}</div>
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:18px;margin:24px 0 6px">{{ wizard.question }}</div>
+            <sc-if value="{{ wizard.sub }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:13px;color:var(--color-neutral-700);line-height:1.5;margin-bottom:14px">{{ wizard.sub }}</div>
+            </sc-if>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+              <sc-for list="{{ wizard.options }}" as="o" hint-placeholder-count="2">
+                <button sc-camel-on-click="{{ o.onClick }}" style="display:flex;align-items:center;gap:14px;text-align:left;width:100%;padding:16px 20px;border-radius:5px;cursor:pointer;border:1px solid var(--color-divider);background:var(--color-surface);font-family:var(--font-heading);font-weight:600;font-size:16px;color:var(--color-text)" style-hover="background:var(--color-accent-200);border-color:var(--color-accent-300)">
+                  {{ o.label }}
+                </button>
+              </sc-for>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:6px">
+              <sc-for list="{{ wizard.fields }}" as="f" hint-placeholder-count="0">
+                <div>
+                  <label style="display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--color-neutral-700);margin-bottom:5px">{{ f.label }}</label>
+                  <sc-if value="{{ f.isSelect }}" hint-placeholder-val="{{ false }}">
+                    <sc-raw-select class="input" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}">
+                      <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="2">
+                        <option value="{{ o.value }}">{{ o.label }}</option>
+                      </sc-for>
+                    </sc-raw-select>
+                  </sc-if>
+                  <sc-if value="{{ f.isArea }}" hint-placeholder-val="{{ false }}">
+                    <textarea class="input" style="min-height:80px;border-radius:5px" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}" placeholder="{{ f.placeholder }}"></textarea>
+                  </sc-if>
+                  <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ false }}">
+                    <input class="input" type="{{ f.type }}" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}" sc-camel-on-key-down="{{ wizard.onKey }}" placeholder="{{ f.placeholder }}">
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">
+              <sc-for list="{{ wizard.ctxPicks }}" as="c" hint-placeholder-count="0">
+                <button sc-camel-on-click="{{ c.onClick }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:7px;cursor:pointer;border:1px solid var(--color-divider);background:{{ c.bg }};color:{{ c.fg }};font-family:var(--font-heading);font-weight:600;font-size:14px" style-hover="border-color:var(--color-accent)">
+                  <span style="width:9px;height:9px;border-radius:7px;background:{{ c.dot }}"></span>{{ c.label }}
+                </button>
+              </sc-for>
+            </div>
+            <sc-if value="{{ wizard.submitLabel }}" hint-placeholder-val="{{ false }}">
+              <button sc-camel-on-click="{{ wizard.onSubmit }}" class="btn btn-primary btn-block" style="margin-top:18px;padding:13px">{{ wizard.submitLabel }}</button>
+            </sc-if>
+            <sc-if value="{{ wizard.altLabel }}" hint-placeholder-val="{{ false }}">
+              <button sc-camel-on-click="{{ wizard.onAlt }}" class="btn btn-ghost btn-block">{{ wizard.altLabel }}</button>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ inboxList.visible }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Inbox</div>
+          <sc-if value="{{ inboxList.count }}" hint-placeholder-val="{{ true }}">
+            <button sc-camel-on-click="{{ inboxList.onProcess }}" class="btn btn-primary">Process to zero ({{ inboxList.count }})</button>
+          </sc-if>
+        </div>
+        <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:18px;max-width:560px">One place for everything. Don't organize here — capture, then clarify one item at a time. Drag a tile onto a bucket below to file it without the wizard.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+          <sc-for list="{{ inboxTiles }}" as="i" hint-placeholder-count="4">
+            <div draggable="{{ true }}" sc-camel-on-drag-start="{{ i.onDragStart }}" sc-camel-on-drag-over="{{ i.onDragOver }}" sc-camel-on-drop="{{ i.onDrop }}" sc-camel-on-drag-end="{{ i.onDragEnd }}" style="display:flex;flex-direction:column;gap:12px;background:var(--color-neutral-100);border:1px solid {{ i.edge }};border-radius:5px;padding:16px 18px;box-shadow:var(--shadow-sm);cursor:grab;opacity:{{ i.opacity }}" style-hover="box-shadow:var(--shadow-md)">
+              <div style="font-size:15px;line-height:1.45;overflow-wrap:anywhere">{{ i.text }}</div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <span style="font-size:11px;color:var(--color-neutral-600)">captured {{ i.age }}</span>
+                <span style="flex:1"></span>
+                <button sc-camel-on-click="{{ i.onClarify }}" class="btn btn-secondary" style="font-size:12.5px;padding:6px 14px">Clarify</button>
+                <button sc-camel-on-click="{{ i.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ inboxList.empty }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:44px;text-align:center;border:1px dashed var(--color-neutral-400);border-radius:6px;color:var(--color-neutral-700)">
+            Inbox zero — mind like water.
+          </div>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:22px;opacity:{{ rail.opacity }}">
+          <sc-for list="{{ rail.zones }}" as="z" hint-placeholder-count="3">
+            <div sc-camel-on-drag-over="{{ z.onDragOver }}" sc-camel-on-drop="{{ z.onDrop }}" style="padding:18px;border-radius:5px;border:2px dashed {{ z.edge }};background:{{ z.bg }};text-align:center;font-family:var(--font-heading);font-weight:600;font-size:15px;color:{{ z.fg }}">{{ z.label }}</div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isNA }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Next actions</div>
+      <button sc-camel-on-click="{{ onAddNA }}" class="btn btn-secondary">+ Add next action</button>
+    </div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px">Grouped by context. Drag a tile into another context to re-file it.</div>
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <sc-for list="{{ naGroups }}" as="g" hint-placeholder-count="4">
+        <div sc-camel-on-drag-over="{{ g.onDragOver }}" sc-camel-on-drop="{{ g.onDrop }}" style="border-radius:6px;padding:16px 18px 18px;background:{{ g.zoneBg }};border:1px solid {{ g.zoneEdge }}">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <span style="width:11px;height:11px;border-radius:7px;background:{{ g.dot }}"></span>
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:18px">{{ g.ctx }}</div>
+            <span style="font-size:11.5px;padding:2px 10px;border-radius:7px;background:{{ g.bg }};color:{{ g.fg }}">{{ g.count }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+            <sc-for list="{{ g.items }}" as="a" hint-placeholder-count="2">
+              <div draggable="{{ true }}" sc-camel-on-drag-start="{{ a.onDragStart }}" sc-camel-on-drag-over="{{ a.onDragOver }}" sc-camel-on-drop="{{ a.onDrop }}" sc-camel-on-drag-end="{{ a.onDragEnd }}" style="display:flex;flex-direction:column;gap:11px;background:var(--color-neutral-100);border:1px solid {{ a.edge }};border-radius:5px;padding:15px 17px;box-shadow:var(--shadow-sm);cursor:grab;opacity:{{ a.opacity }}" style-hover="box-shadow:var(--shadow-md)">
+                <div style="display:flex;gap:11px;align-items:flex-start">
+                  <button sc-camel-on-click="{{ a.onToggle }}" style="width:23px;height:23px;flex:none;margin-top:1px;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid {{ a.cbEdge }};background:{{ a.cbBg }};color:{{ a.cbInk }};font-size:13px;line-height:1;display:grid;place-items:center">✓</button>
+                  <div style="flex:1;min-width:0;font-size:15px;line-height:1.42;font-weight:600;overflow-wrap:anywhere">{{ a.text }}</div>
+                  <button sc-camel-on-click="{{ a.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+                </div>
+                <div style="display:flex;gap:7px;align-items:center;flex-wrap:wrap">
+                  <sc-if value="{{ a.project }}" hint-placeholder-val="{{ false }}">
+                    <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:var(--color-neutral-200);color:var(--color-neutral-800)">{{ a.project }}</span>
+                  </sc-if>
+                  <span style="margin-left:auto;font-size:11px;color:var(--color-neutral-600)">{{ a.age }}</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ g.empty }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:13px;color:var(--color-neutral-600);padding:6px 2px">Nothing here — drop an action in.</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ naDoneCount }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:30px">
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:18px;margin-bottom:12px">Recently completed · {{ naDoneCount }}</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:12px">
+          <sc-for list="{{ naDone }}" as="a" hint-placeholder-count="2">
+            <div style="display:flex;gap:10px;align-items:flex-start;background:var(--color-accent-2-100);border-radius:5px;padding:13px 15px">
+              <button sc-camel-on-click="{{ a.onToggle }}" style="width:21px;height:21px;flex:none;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid var(--color-accent-2-600);background:var(--color-accent-2-500);color:var(--color-bg);font-size:12px">✓</button>
+              <div style="flex:1;min-width:0;font-size:13.5px;text-decoration:line-through;color:var(--color-neutral-700);overflow-wrap:anywhere">{{ a.text }}</div>
+              <button sc-camel-on-click="{{ a.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:12px">✕</button>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isProj }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Projects</div>
+      <button sc-camel-on-click="{{ onAddProj }}" class="btn btn-secondary">+ Add project</button>
+    </div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px">Every multi-step outcome. Drag between the three lanes to change status.</div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <sc-for list="{{ projGroups }}" as="g" hint-placeholder-count="3">
+        <div sc-camel-on-drag-over="{{ g.onDragOver }}" sc-camel-on-drop="{{ g.onDrop }}" style="border-radius:6px;padding:16px 18px 18px;background:{{ g.zoneBg }};border:1px solid {{ g.zoneEdge }}">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:18px">{{ g.label }}</div>
+            <span style="font-size:11.5px;padding:2px 10px;border-radius:7px;background:var(--color-neutral-200);color:var(--color-neutral-800)">{{ g.count }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;align-items:start">
+            <sc-for list="{{ g.items }}" as="p" hint-placeholder-count="2">
+              <div draggable="{{ true }}" sc-camel-on-drag-start="{{ p.onDragStart }}" sc-camel-on-drag-over="{{ p.onDragOver }}" sc-camel-on-drop="{{ p.onDrop }}" sc-camel-on-drag-end="{{ p.onDragEnd }}" style="display:flex;flex-direction:column;gap:11px;background:var(--color-neutral-100);border:1px solid {{ p.edge }};border-radius:5px;padding:16px 18px;box-shadow:var(--shadow-sm);cursor:grab;opacity:{{ p.opacity }}" style-hover="box-shadow:var(--shadow-md)">
+                <div style="display:flex;gap:11px;align-items:flex-start">
+                  <button sc-camel-on-click="{{ p.onToggle }}" style="width:23px;height:23px;flex:none;margin-top:1px;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid var(--color-neutral-400);background:transparent;color:transparent;font-size:13px">✓</button>
+                  <div style="flex:1;min-width:0;font-family:var(--font-heading);font-weight:600;font-size:17px;line-height:1.24;overflow-wrap:anywhere">{{ p.title }}</div>
+                  <button sc-camel-on-click="{{ p.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+                </div>
+                <sc-if value="{{ p.outcome }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-size:12.5px;color:var(--color-neutral-700)">{{ p.outcome }}</div>
+                </sc-if>
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <sc-for list="{{ p.actions }}" as="a" hint-placeholder-count="1">
+                    <div style="display:flex;gap:8px;align-items:center;font-size:12.5px">
+                      <span style="width:7px;height:7px;border-radius:7px;background:{{ a.dot }};flex:none"></span>
+                      <span style="overflow-wrap:anywhere">{{ a.text }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                  <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:{{ p.badgeBg }};color:{{ p.badgeFg }}">{{ p.badge }}</span>
+                  <sc-if value="{{ p.stalled }}" hint-placeholder-val="{{ false }}">
+                    <button sc-camel-on-click="{{ p.onAddAction }}" class="btn btn-primary" style="font-size:12px;padding:5px 12px">+ Next action</button>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ g.empty }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:13px;color:var(--color-neutral-600);padding:6px 2px">Empty lane — drop a project here.</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isWF }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Waiting for</div>
+      <button sc-camel-on-click="{{ onAddWF }}" class="btn btn-secondary">+ Add waiting item</button>
+    </div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px">Delegated and pending others. Anything past {{ threshold }} days is flagged to follow up.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+      <sc-for list="{{ wfTiles }}" as="w" hint-placeholder-count="4">
+        <div draggable="{{ true }}" sc-camel-on-drag-start="{{ w.onDragStart }}" sc-camel-on-drag-over="{{ w.onDragOver }}" sc-camel-on-drop="{{ w.onDrop }}" sc-camel-on-drag-end="{{ w.onDragEnd }}" style="display:flex;flex-direction:column;gap:12px;background:{{ w.tileBg }};border:1px solid {{ w.edge }};border-radius:5px;padding:16px 18px;box-shadow:var(--shadow-sm);cursor:grab;opacity:{{ w.opacity }}" style-hover="box-shadow:var(--shadow-md)">
+          <div style="display:flex;gap:11px;align-items:flex-start">
+            <button sc-camel-on-click="{{ w.onToggle }}" style="width:23px;height:23px;flex:none;margin-top:1px;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid var(--color-neutral-400);background:transparent;color:transparent;font-size:13px">✓</button>
+            <div style="flex:1;min-width:0;font-size:15px;line-height:1.42;font-weight:600;overflow-wrap:anywhere">{{ w.what }}</div>
+            <button sc-camel-on-click="{{ w.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:{{ w.pillBg }};color:{{ w.pillFg }}">{{ w.who }}</span>
+            <span style="margin-left:auto;font-size:11px;color:var(--color-neutral-600)">{{ w.age }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ wfEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:40px;text-align:center;border:1px dashed var(--color-neutral-400);border-radius:6px;color:var(--color-neutral-700)">Nothing delegated or pending.</div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isCal }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Calendar</div>
+      <button sc-camel-on-click="{{ onAddCal }}" class="btn btn-secondary">+ Add calendar item</button>
+    </div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px;max-width:600px">The hard landscape only: time-specific appointments, day-specific actions, day-specific information. Not a wish list.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+      <sc-for list="{{ calTiles }}" as="c" hint-placeholder-count="4">
+        <div style="display:flex;gap:14px;align-items:flex-start;background:{{ c.tileBg }};border:1px solid var(--color-divider);border-radius:5px;padding:16px 18px;box-shadow:var(--shadow-sm)">
+          <div style="text-align:center;min-width:46px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1;color:var(--color-accent-700)">{{ c.day }}</div>
+            <div style="font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);margin-top:3px">{{ c.month }}</div>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:15px;font-weight:600;line-height:1.4;overflow-wrap:anywhere">{{ c.text }}</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px">
+              <sc-if value="{{ c.time }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:var(--color-accent-200);color:var(--color-accent-800)">{{ c.time }}</span>
+              </sc-if>
+              <span style="font-size:11px;color:var(--color-neutral-600)">{{ c.kind }}</span>
+            </div>
+          </div>
+          <button sc-camel-on-click="{{ c.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ calEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:40px;text-align:center;border:1px dashed var(--color-neutral-400);border-radius:6px;color:var(--color-neutral-700)">Nothing scheduled ahead.</div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isSM }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Someday / maybe</div>
+      <button sc-camel-on-click="{{ onAddSM }}" class="btn btn-secondary">+ Add someday item</button>
+    </div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px">A guilt-free parking lot. Good ideas rest here without cluttering the active lists.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+      <sc-for list="{{ smTiles }}" as="s" hint-placeholder-count="4">
+        <div draggable="{{ true }}" sc-camel-on-drag-start="{{ s.onDragStart }}" sc-camel-on-drag-over="{{ s.onDragOver }}" sc-camel-on-drop="{{ s.onDrop }}" sc-camel-on-drag-end="{{ s.onDragEnd }}" style="display:flex;flex-direction:column;gap:12px;background:var(--color-neutral-100);border:1px solid {{ s.edge }};border-radius:5px;padding:16px 18px;box-shadow:var(--shadow-sm);opacity:{{ s.opacity }}">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <div style="flex:1;min-width:0;font-size:15px;line-height:1.45;overflow-wrap:anywhere">{{ s.text }}</div>
+            <button sc-camel-on-click="{{ s.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+          </div>
+          <div style="font-size:11px;color:var(--color-neutral-600)">added {{ s.age }}</div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <sc-raw-select class="input" value="{{ s.ctxValue }}" sc-camel-on-change="{{ s.onCtxChange }}" style="width:auto;min-height:32px;font-size:12px;padding:4px 12px">
+              <sc-for list="{{ s.ctxOptions }}" as="o" hint-placeholder-count="2">
+                <option value="{{ o.value }}">{{ o.label }}</option>
+              </sc-for>
+            </sc-raw-select>
+            <button sc-camel-on-click="{{ s.onActivate }}" class="btn btn-primary" style="font-size:12px;padding:6px 13px">Activate →</button>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ smEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:40px;text-align:center;border:1px dashed var(--color-neutral-400);border-radius:6px;color:var(--color-neutral-700)">Empty.</div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isRef }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">Reference</div>
+      <button sc-camel-on-click="{{ onAddRef }}" class="btn btn-secondary">+ Add reference</button>
+    </div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px">No action, worth keeping.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--tile,270px),1fr));gap:14px;align-items:start">
+      <sc-for list="{{ refTiles }}" as="r" hint-placeholder-count="3">
+        <div style="display:flex;flex-direction:column;gap:10px;background:var(--color-surface);border-radius:5px;padding:16px 18px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <div style="flex:1;min-width:0;font-size:14px;line-height:1.5;overflow-wrap:anywhere">{{ r.text }}</div>
+            <button sc-camel-on-click="{{ r.onDelete }}" style="border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer;font-family:var(--font-body);font-size:13px;padding:2px 4px" style-hover="color:var(--color-accent-700)">✕</button>
+          </div>
+          <div style="font-size:11px;color:var(--color-neutral-600)">{{ r.age }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ refEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:40px;text-align:center;border:1px dashed var(--color-neutral-400);border-radius:6px;color:var(--color-neutral-700)">Empty.</div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isReview }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <sc-if value="{{ reviewBanner }}" hint-placeholder-val="{{ false }}">
+      <div style="background:var(--color-accent-2-200);border-radius:6px;padding:18px 22px;margin-bottom:20px;font-family:var(--font-heading);font-weight:600;font-size:17px">Weekly review complete — your system is current and trustworthy again.</div>
+    </sc-if>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:26px;margin-bottom:6px">The weekly review</div>
+    <div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:20px;max-width:600px">Twenty minutes, once a week — the keystone ritual. Fell off the wagon? Just start ticking.</div>
+    <div style="background:var(--color-surface);border-radius:6px;padding:20px 24px;margin-bottom:24px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="font-size:14px">Last completed: <b>{{ reviewWhen }}</b></div>
+        <div style="font-size:12.5px;color:var(--color-neutral-700)">{{ reviewDoneN }} / {{ reviewTotal }} steps</div>
+      </div>
+      <div style="height:11px;background:var(--color-neutral-300);border-radius:7px;overflow:hidden;margin-top:12px">
+        <div style="height:100%;border-radius:7px;background:var(--color-accent-500);transition:width .4s;width:{{ reviewPct }}"></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <sc-for list="{{ reviewGroups }}" as="g" hint-placeholder-count="3">
+        <div style="background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:20px">
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:18px;margin-bottom:14px">{{ g.label }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="3">
+              <div style="display:flex;gap:11px;align-items:flex-start;background:{{ i.bg }};border-radius:5px;padding:12px 14px">
+                <button sc-camel-on-click="{{ i.onToggle }}" style="width:22px;height:22px;flex:none;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid {{ i.cbEdge }};background:{{ i.cbBg }};color:{{ i.cbInk }};font-size:12px;line-height:1;display:grid;place-items:center">✓</button>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:13.5px;line-height:1.45">{{ i.label }}</div>
+                  <sc-if value="{{ i.badge }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;gap:8px;align-items:center;margin-top:7px">
+                      <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:{{ i.badgeBg }};color:{{ i.badgeFg }}">{{ i.badge }}</span>
+                      <sc-if value="{{ i.actionLabel }}" hint-placeholder-val="{{ false }}">
+                        <button sc-camel-on-click="{{ i.onAction }}" class="btn btn-ghost" style="font-size:12px">{{ i.actionLabel }}</button>
+                      </sc-if>
+                    </div>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <button sc-camel-on-click="{{ onCompleteReview }}" class="btn btn-primary btn-block" style="margin-top:22px;padding:15px;font-size:16px;animation:{{ reviewPulse }}">Complete weekly review &amp; stamp today's date</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isSettings }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:26px;margin-bottom:20px">Settings</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <div style="background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:20px">
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:12px">Follow-up threshold</div>
+        <div style="font-size:12.5px;color:var(--color-neutral-700);margin-bottom:12px">Flag waiting-for items older than:</div>
+        <sc-raw-select class="input" value="{{ thresholdValue }}" sc-camel-on-change="{{ onThreshold }}" style="width:auto">
+          <sc-for list="{{ thresholdOptions }}" as="o" hint-placeholder-count="3">
+            <option value="{{ o.value }}">{{ o.label }}</option>
+          </sc-for>
+        </sc-raw-select>
+      </div>
+      <div style="background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:20px">
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:12px">Contexts</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+          <sc-for list="{{ ctxTags }}" as="c" hint-placeholder-count="5">
+            <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;padding:6px 13px;border-radius:7px;background:{{ c.bg }};color:{{ c.fg }}">
+              {{ c.label }}
+              <button sc-camel-on-click="{{ c.onRemove }}" style="border:none;background:transparent;color:inherit;opacity:.65;cursor:pointer;font-family:var(--font-body);font-size:12px;padding:0">✕</button>
+            </span>
+          </sc-for>
+        </div>
+        <div style="display:flex;gap:8px">
+          <input class="input" value="{{ ctxNew }}" sc-camel-on-change="{{ onCtxNewChange }}" sc-camel-on-key-down="{{ onCtxNewKey }}" placeholder="@NewContext">
+          <button sc-camel-on-click="{{ onAddContext }}" class="btn btn-secondary">Add</button>
+        </div>
+      </div>
+      <div style="background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:20px">
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:12px">Your data</div>
+        <div style="font-size:12.5px;color:var(--color-neutral-700);line-height:1.5;margin-bottom:14px">Everything lives in this browser. Export a backup so your trusted system is never trapped in one place.</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button sc-camel-on-click="{{ onExport }}" class="btn btn-secondary">Export JSON</button>
+          <label class="btn btn-secondary" style="cursor:pointer">Import<input type="file" accept="application/json" sc-camel-on-change="{{ onImport }}" style="display:none"></label>
+        </div>
+      </div>
+      <div style="background:var(--color-surface);border-radius:6px;padding:20px">
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;margin-bottom:12px">About</div>
+        <div style="font-size:12.5px;color:var(--color-neutral-800);line-height:1.6">Capture → Clarify → Organize → Reflect → Engage. Capture anything in seconds, clarify one item at a time, keep the lists distinct, and let the weekly review keep the system trustworthy.</div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+
+<sc-if value="{{ focus.visible }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:var(--color-accent-2-900);display:grid;place-items:center;padding:40px;z-index:50">
+    <div style="max-width:720px;text-align:center">
+      <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-2-300);margin-bottom:18px">Focus · {{ focus.counter }}</div>
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:44px;line-height:1.14;color:var(--color-neutral-100);overflow-wrap:anywhere">{{ focus.text }}</div>
+      <div style="display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:22px">
+        <span style="font-size:12px;padding:4px 13px;border-radius:7px;background:{{ focus.ctxBg }};color:{{ focus.ctxFg }}">{{ focus.ctx }}</span>
+        <sc-if value="{{ focus.project }}" hint-placeholder-val="{{ false }}">
+          <span style="font-size:12px;color:var(--color-accent-2-300)">{{ focus.project }}</span>
+        </sc-if>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px">
+        <button sc-camel-on-click="{{ focus.onDone }}" class="btn btn-primary" style="padding:14px 28px;font-size:16px">Done</button>
+        <button sc-camel-on-click="{{ focus.onSkip }}" class="btn" style="padding:14px 24px;border:1px solid var(--color-accent-2-600);color:var(--color-neutral-200)">Skip →</button>
+        <button sc-camel-on-click="{{ focus.onExit }}" class="btn" style="padding:14px 24px;color:var(--color-accent-2-300)">Exit focus</button>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ focus.empty }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:var(--color-accent-2-900);display:grid;place-items:center;padding:40px;z-index:50">
+    <div style="text-align:center;color:var(--color-neutral-100)">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:30px;margin:14px 0 20px">Nothing left to focus on.</div>
+      <button sc-camel-on-click="{{ focus.onExit }}" class="btn btn-primary" style="padding:13px 26px">Back to the dashboard</button>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ rt.visible }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:rgba(38,34,28,.42);display:flex;align-items:flex-start;justify-content:center;padding:6vh 16px 24px;z-index:40;overflow-y:auto">
+    <div style="width:100%;max-width:660px;background:var(--color-neutral-100);border:1px solid var(--color-divider);border-radius:6px;padding:26px 28px;box-shadow:var(--shadow-md);animation:rise .2s ease">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <span style="font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;background:var(--color-accent-200);color:var(--color-accent-800);padding:4px 12px;border-radius:7px">{{ rt.title }}<sc-if value="{{ rt.counter }}" hint-placeholder-val="{{ true }}"> · {{ rt.counter }}</sc-if></span>
+        <button sc-camel-on-click="{{ rt.onClose }}" class="btn btn-ghost">Close ✕</button>
+      </div>
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;line-height:1.28;margin:18px 0 6px">{{ rt.question }}</div>
+      <sc-if value="{{ rt.sub }}" hint-placeholder-val="{{ true }}">
+        <div style="font-size:13px;color:var(--color-neutral-700);line-height:1.5;margin-bottom:6px">{{ rt.sub }}</div>
+      </sc-if>
+
+      <sc-if value="{{ rt.card.visible }}" hint-placeholder-val="{{ false }}">
+        <div style="background:var(--color-accent-2-200);border-radius:6px;padding:20px 22px;margin-top:14px">
+          <div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-2-800);margin-bottom:8px">{{ rt.card.kicker }}</div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:{{ rt.card.size }};line-height:1.2;overflow-wrap:anywhere">{{ rt.card.move }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+            <sc-for list="{{ rt.card.rows }}" as="r" hint-placeholder-count="2">
+              <div>
+                <div style="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--color-accent-2-800)">{{ r.label }}</div>
+                <div style="font-size:14.5px;line-height:1.45;color:var(--color-text);overflow-wrap:anywhere;white-space:pre-wrap">{{ r.text }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ rt.hasRefs }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px">
+          <sc-for list="{{ rt.refs }}" as="o" hint-placeholder-count="2">
+            <div style="display:flex;gap:12px;align-items:flex-start;background:var(--color-surface);border-radius:5px;padding:12px 14px">
+              <span style="font-family:var(--font-heading);font-weight:600;color:var(--color-accent-2-700)">{{ o.n }}</span>
+              <span style="font-size:14.5px;line-height:1.45;overflow-wrap:anywhere">{{ o.text }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ rt.hasRows }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+          <sc-for list="{{ rt.rows }}" as="r" hint-placeholder-count="2">
+            <div style="background:var(--color-surface);border-radius:5px;padding:12px 14px">
+              <div style="font-size:14.5px;font-weight:600;line-height:1.4;overflow-wrap:anywhere">{{ r.text }}</div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:9px">
+                <sc-for list="{{ r.opts }}" as="o" hint-placeholder-count="3">
+                  <button sc-camel-on-click="{{ o.onClick }}" style="font-size:12.5px;padding:6px 13px;border-radius:7px;cursor:pointer;font-family:var(--font-body);border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }}">{{ o.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ rt.hasPicks }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;max-height:300px;overflow-y:auto;padding:2px">
+          <sc-for list="{{ rt.picks }}" as="p" hint-placeholder-count="3">
+            <button sc-camel-on-click="{{ p.onClick }}" style="display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;padding:11px 15px;border-radius:5px;cursor:pointer;border:1px solid {{ p.edge }};background:{{ p.bg }};font-family:var(--font-body);color:var(--color-text)">
+              <span style="width:14px;height:14px;flex:none;margin-top:3px;border-radius:7px;border:2px solid {{ p.edge }};background:{{ p.dot }}"></span>
+              <span style="flex:1;min-width:0">
+                <span style="display:block;font-size:14.5px;font-weight:600;line-height:1.4;overflow-wrap:anywhere">{{ p.text }}</span>
+                <sc-if value="{{ p.meta }}" hint-placeholder-val="{{ true }}">
+                  <span style="display:block;font-size:11.5px;color:var(--color-neutral-700);margin-top:3px;overflow-wrap:anywhere">{{ p.meta }}</span>
+                </sc-if>
+              </span>
+              <sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:var(--color-accent-2-200);color:var(--color-accent-2-800);flex:none">{{ p.tag }}</span>
+              </sc-if>
+            </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ rt.moreLabel }}" hint-placeholder-val="{{ false }}">
+          <button sc-camel-on-click="{{ rt.onMore }}" class="btn btn-ghost" style="font-size:12.5px;margin-top:4px">{{ rt.moreLabel }}</button>
+        </sc-if>
+      </sc-if>
+
+      <sc-if value="{{ rt.hasChecks }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+          <sc-for list="{{ rt.checks }}" as="i" hint-placeholder-count="3">
+            <div style="display:flex;gap:11px;align-items:flex-start;background:{{ i.bg }};border-radius:5px;padding:12px 14px">
+              <button sc-camel-on-click="{{ i.onToggle }}" style="width:22px;height:22px;flex:none;border-radius:3px;cursor:pointer;font-family:var(--font-body);border:2px solid {{ i.cbEdge }};background:{{ i.cbBg }};color:{{ i.cbInk }};font-size:12px;line-height:1;display:grid;place-items:center">✓</button>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:14px;line-height:1.45">{{ i.label }}</div>
+                <sc-if value="{{ i.sub }}" hint-placeholder-val="{{ true }}">
+                  <div style="font-size:12.5px;color:var(--color-neutral-700);line-height:1.45;margin-top:4px;overflow-wrap:anywhere;white-space:pre-wrap">{{ i.sub }}</div>
+                </sc-if>
+                <sc-if value="{{ i.timer }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;gap:10px;align-items:center;margin-top:9px">
+                    <span style="font-family:var(--font-heading);font-weight:600;font-size:18px;color:var(--color-accent-700);min-width:52px">{{ rt.timer.label }}</span>
+                    <button sc-camel-on-click="{{ rt.timer.onClick }}" class="btn btn-secondary" style="font-size:12px;padding:5px 12px">{{ rt.timer.btn }}</button>
+                    <sc-if value="{{ rt.timer.note }}" hint-placeholder-val="{{ false }}">
+                      <span style="font-size:12.5px;color:var(--color-accent-800)">{{ rt.timer.note }}</span>
+                    </sc-if>
+                  </div>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px">
+        <sc-for list="{{ rt.fields }}" as="f" hint-placeholder-count="0">
+          <div style="grid-column:{{ f.span }}">
+            <label style="display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--color-neutral-700);margin-bottom:5px">{{ f.label }}</label>
+            <sc-if value="{{ f.isSelect }}" hint-placeholder-val="{{ false }}">
+              <sc-raw-select class="input" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}">
+                <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="2">
+                  <option value="{{ o.value }}">{{ o.label }}</option>
+                </sc-for>
+              </sc-raw-select>
+            </sc-if>
+            <sc-if value="{{ f.isArea }}" hint-placeholder-val="{{ false }}">
+              <textarea class="input" style="min-height:{{ f.rows }};border-radius:5px" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}" placeholder="{{ f.placeholder }}"></textarea>
+            </sc-if>
+            <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ false }}">
+              <input class="input" type="{{ f.type }}" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}" placeholder="{{ f.placeholder }}">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ rt.err }}" hint-placeholder-val="{{ false }}">
+        <div style="font-size:13px;color:var(--color-accent-800);background:var(--color-accent-100);border-radius:5px;padding:9px 12px;margin-top:14px">{{ rt.err }}</div>
+      </sc-if>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:20px">
+        <sc-if value="{{ rt.primaryLabel }}" hint-placeholder-val="{{ true }}">
+          <button sc-camel-on-click="{{ rt.onPrimary }}" class="btn btn-primary" style="padding:12px 22px">{{ rt.primaryLabel }}</button>
+        </sc-if>
+        <sc-if value="{{ rt.secondaryLabel }}" hint-placeholder-val="{{ false }}">
+          <button sc-camel-on-click="{{ rt.onSecondary }}" class="btn btn-secondary">{{ rt.secondaryLabel }}</button>
+        </sc-if>
+        <span style="flex:1"></span>
+        <sc-if value="{{ rt.backLabel }}" hint-placeholder-val="{{ false }}">
+          <button sc-camel-on-click="{{ rt.onBack }}" class="btn btn-ghost">{{ rt.backLabel }}</button>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ fm.visible }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:var(--color-accent-2-900);display:grid;place-items:center;padding:40px;z-index:50;overflow-y:auto">
+    <div style="max-width:720px;text-align:center">
+      <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-2-300);margin-bottom:18px">First move</div>
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:40px;line-height:1.14;color:var(--color-neutral-100);overflow-wrap:anywhere">{{ fm.move }}</div>
+
+      <sc-if value="{{ fm.working }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <div style="margin:26px auto 0;max-width:560px;border:1px solid var(--color-accent-2-600);border-radius:6px;padding:16px 20px">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-2-300);margin-bottom:6px">Start here</div>
+            <div style="font-size:19px;line-height:1.4;color:var(--color-neutral-100);overflow-wrap:anywhere">{{ fm.step }}</div>
+          </div>
+          <sc-if value="{{ fm.doneDef }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:14px;color:var(--color-accent-2-300);margin-top:16px;overflow-wrap:anywhere">Done looks like: {{ fm.doneDef }}</div>
+          </sc-if>
+          <div style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:22px;font-size:13px;color:var(--color-accent-2-300)">
+            <sc-if value="{{ fm.showTime }}" hint-placeholder-val="{{ true }}"><span>{{ fm.elapsed }}</span></sc-if>
+            <button sc-camel-on-click="{{ fm.onToggleTime }}" style="border:none;background:transparent;color:var(--color-accent-2-300);cursor:pointer;font-family:var(--font-body);font-size:12px;text-decoration:underline;opacity:.75">{{ fm.timeToggle }}</button>
+          </div>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px">
+            <button sc-camel-on-click="{{ fm.onStop }}" class="btn" style="padding:14px 26px;border:1px solid var(--color-accent-2-600);color:var(--color-neutral-200)">I'm stopping here</button>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fm.asking }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;color:var(--color-neutral-200);margin-top:28px">How did it go?</div>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+            <button sc-camel-on-click="{{ fm.onDone }}" class="btn btn-primary" style="padding:14px 26px;font-size:16px">Done</button>
+            <button sc-camel-on-click="{{ fm.onProgress }}" class="btn" style="padding:14px 24px;border:1px solid var(--color-accent-2-600);color:var(--color-neutral-200)">Made progress</button>
+            <button sc-camel-on-click="{{ fm.onNotYet }}" class="btn" style="padding:14px 24px;border:1px solid var(--color-accent-2-600);color:var(--color-neutral-200)">Didn't get to it</button>
+          </div>
+          <button sc-camel-on-click="{{ fm.onResume }}" class="btn" style="margin-top:16px;padding:10px 20px;color:var(--color-accent-2-300)">← Back to work</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fm.after }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;color:var(--color-neutral-200);margin-top:28px">{{ fm.afterTitle }}</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-accent-2-300);margin:10px auto 0;max-width:480px">{{ fm.afterBody }}</div>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+            <sc-if value="{{ fm.inboxN }}" hint-placeholder-val="{{ true }}">
+              <button sc-camel-on-click="{{ fm.onInbox }}" class="btn btn-primary" style="padding:14px 26px;font-size:16px">{{ fm.inboxLabel }}</button>
+            </sc-if>
+            <button sc-camel-on-click="{{ fm.onClose }}" class="btn" style="padding:14px 24px;border:1px solid var(--color-accent-2-600);color:var(--color-neutral-200)">Back to the dashboard</button>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;tileMinWidth&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:270,&quot;min&quot;:200,&quot;max&quot;:380,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showSuggestion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;colorCodeContexts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.KEY = 'gtd_state_v1';
+    this.DEFAULTS = ['@Computer', '@Calls', '@Office', '@Home', '@Errands', '@Agenda-Jesse', '@Agenda-Glory'];
+    this.PALETTE = [
+      { bg: 'var(--color-accent-200)', fg: 'var(--color-accent-800)', dot: 'var(--color-accent-500)' },
+      { bg: 'var(--color-accent-2-200)', fg: 'var(--color-accent-2-800)', dot: 'var(--color-accent-2-500)' },
+      { bg: 'var(--color-neutral-300)', fg: 'var(--color-neutral-800)', dot: 'var(--color-neutral-600)' },
+      { bg: 'var(--color-accent-100)', fg: 'var(--color-accent-700)', dot: 'var(--color-accent-400)' },
+      { bg: 'var(--color-accent-2-100)', fg: 'var(--color-accent-2-700)', dot: 'var(--color-accent-2-400)' },
+      { bg: 'var(--color-accent-300)', fg: 'var(--color-accent-900)', dot: 'var(--color-accent-600)' },
+      { bg: 'var(--color-accent-2-300)', fg: 'var(--color-accent-2-900)', dot: 'var(--color-accent-2-600)' }
+    ];
+    this.REVIEW = [
+      ['Get clear', [
+        ['c_collect', 'Collect loose papers, notes and materials into your Inbox'],
+        ['c_mind', 'Empty your head — capture every open loop still rattling around'],
+        ['c_inbox', 'Process all inboxes to zero']
+      ]],
+      ['Get current', [
+        ['u_na', 'Review next actions — tick off what is done, delete what is stale'],
+        ['u_proj', 'Review projects one by one — confirm each active one has a next action'],
+        ['u_wf', 'Review waiting for — nudge anything stalled'],
+        ['u_past', 'Review the past two weeks of calendar for loose ends'],
+        ['u_future', 'Review the upcoming two weeks of calendar']
+      ]],
+      ['Get creative', [
+        ['v_someday', 'Review someday / maybe — promote anything whose time has come'],
+        ['v_new', 'Add anything new, and dream a little']
+      ]]
+    ];
+    this.TODAY = this.readTodayOverride();
+    this.state = {
+      S: this.load(), view: 'engage', ctxFilter: 'All', wz: null, form: {},
+      openForm: null, focusOn: false, focusIdx: 0, suggIdx: 0,
+      drag: null, over: null, cap: '', ctxNew: '', justReviewed: false,
+      rt: null, fmOn: false, fmPhase: 'work', scanEnd: null, tick: 0
+    };
+  }
+
+  componentDidMount() {
+    var self = this;
+    // Drives the fire-scan countdown and the focus elapsed-time readout.
+    this.ticker = setInterval(function () {
+      var s = self.state;
+      if (s.fmOn || (s.scanEnd && Date.now() < s.scanEnd + 1500)) self.setState({ tick: Date.now() });
+    }, 1000);
+  }
+  componentWillUnmount() { clearInterval(this.ticker); }
+
+  /* ---------- state persistence ---------- */
+  fresh() {
+    return {
+      seq: 1, ordered2: true, lastWeeklyReview: null,
+      settings: { waitingAgingDays: 7, contexts: this.DEFAULTS.slice() },
+      inbox: [{ id: 1, text: 'Welcome. This is your one Inbox. Capture everything on your mind here, then process this list to zero.', captured: new Date().toISOString() }],
+      nextActions: [], projects: [], waitingFor: [], calendar: [], somedayMaybe: [], reference: [],
+      review: { checked: {} },
+      dayLog: {}, weeks: {}
+    };
+  }
+  load() {
+    try {
+      var r = window.localStorage.getItem(this.KEY);
+      if (r) return this.migrate(JSON.parse(r));
+    } catch (e) {}
+    return this.fresh();
+  }
+  migrate(s) {
+    var d = this.fresh();
+    s = s || {};
+    s.settings = Object.assign({}, d.settings, s.settings || {});
+    if (!Array.isArray(s.settings.contexts) || !s.settings.contexts.length) s.settings.contexts = d.settings.contexts;
+    var lists = ['inbox', 'nextActions', 'projects', 'waitingFor', 'calendar', 'somedayMaybe', 'reference'];
+    lists.forEach(function (k) { if (!Array.isArray(s[k])) s[k] = []; });
+    if (!s.ordered2) { lists.forEach(function (k) { s[k] = s[k].slice().reverse(); }); s.ordered2 = true; }
+    if (typeof s.seq !== 'number') s.seq = 1;
+    if (!('lastWeeklyReview' in s)) s.lastWeeklyReview = null;
+    var checked = (s.review && s.review.checked) || (s.ui && s.ui.review && s.ui.review.checked) || {};
+    s.review = { checked: checked };
+    delete s.ui;
+    // Daily routine: day log keyed by local date, weekly outcomes keyed by ISO week.
+    var isMap = function (v) { return v && typeof v === 'object' && !Array.isArray(v); };
+    if (!isMap(s.dayLog)) s.dayLog = {};
+    if (!isMap(s.weeks)) s.weeks = {};
+    Object.keys(s.weeks).forEach(function (k) {
+      if (!isMap(s.weeks[k])) s.weeks[k] = {};
+      if (!Array.isArray(s.weeks[k].outcomes)) s.weeks[k].outcomes = [];
+    });
+    return s;
+  }
+  save() { try { window.localStorage.setItem(this.KEY, JSON.stringify(this.state.S)); } catch (e) {} }
+  commit(fn, extra) {
+    var S = this.state.S;
+    if (fn) fn(S);
+    this.save();
+    this.setState(Object.assign({ S: S }, extra || {}));
+  }
+  nid() { var S = this.state.S; S.seq = (S.seq || 0) + 1; return S.seq; }
+
+  /* ---------- helpers ---------- */
+  nowIso() { return new Date().toISOString(); }
+  // ?today=YYYY-MM-DD pretends it's that date (local time), for testing day/week logic.
+  readTodayOverride() {
+    try {
+      var t = new URLSearchParams(window.location.search).get('today') || '';
+      return /^\d{4}-\d{2}-\d{2}$/.test(t) ? t : null;
+    } catch (e) { return null; }
+  }
+  now() {
+    var d = new Date(), o = this.TODAY;
+    return o ? new Date(+o.slice(0, 4), +o.slice(5, 7) - 1, +o.slice(8, 10), d.getHours(), d.getMinutes(), d.getSeconds()) : d;
+  }
+  todayStr() { return this.dstr(this.now()); }
+  dstr(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  parseD(s) { var p = String(s).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  addDays(s, n) { var d = this.parseD(s); d.setDate(d.getDate() + n); return this.dstr(d); }
+  nextWorkday(s) {
+    var t = this.addDays(s, 1);
+    while (this.parseD(t).getDay() === 0 || this.parseD(t).getDay() === 6) t = this.addDays(t, 1);
+    return t;
+  }
+  isoWeek(s) {
+    var d = this.parseD(s);
+    d.setDate(d.getDate() - (d.getDay() + 6) % 7 + 3);   // Thursday of this week decides the year
+    var w1 = new Date(d.getFullYear(), 0, 4);
+    w1.setDate(w1.getDate() - (w1.getDay() + 6) % 7 + 3); // Thursday of week 1
+    return d.getFullYear() + '-W' + String(1 + Math.round((d - w1) / 604800000)).padStart(2, '0');
+  }
+  // 'tomorrow', 'Monday', or 'Tue, Oct 20' — relative to the day `from`.
+  dayName(target, from) {
+    if (target === from) return 'today';
+    if (target === this.addDays(from, 1)) return 'tomorrow';
+    var d = this.parseD(target);
+    if (target > from && target <= this.addDays(from, 6)) return d.toLocaleDateString(undefined, { weekday: 'long' });
+    return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+  }
+  cap1(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  daysSince(iso) { return iso ? Math.floor((Date.now() - new Date(iso).getTime()) / 86400000) : 0; }
+  ago(iso) {
+    if (!iso) return '';
+    var s = (Date.now() - new Date(iso).getTime()) / 1000;
+    if (s < 45) return 'just now';
+    var m = s / 60; if (m < 60) return Math.round(m) + 'm ago';
+    var h = m / 60; if (h < 24) return Math.round(h) + 'h ago';
+    var dd = h / 24; if (dd < 7) return Math.round(dd) + 'd ago';
+    return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  }
+  kindLabel(k) { return k === 'action' ? 'Day-specific action' : k === 'info' ? 'Day-specific information' : 'Appointment'; }
+  ctxColor(c) {
+    var list = this.state.S.settings.contexts;
+    var i = list.indexOf(c);
+    if (i < 0) { i = 0; for (var j = 0; j < String(c).length; j++) i += String(c).charCodeAt(j); }
+    if (this.props.colorCodeContexts === false) return { bg: 'var(--color-neutral-200)', fg: 'var(--color-neutral-800)', dot: 'var(--color-neutral-600)' };
+    return this.PALETTE[i % this.PALETTE.length];
+  }
+  byId(list, id) { return (this.state.S[list] || []).find(function (x) { return x.id === id; }); }
+  projTitle(id) { var p = this.byId('projects', id); return p ? p.title : null; }
+  openNA(pid) { return this.state.S.nextActions.filter(function (a) { return a.projectId === pid && !a.done; }).length; }
+
+  /* ---------- form values ---------- */
+  fv(id, def) { var v = this.state.form[id]; return v === undefined ? def : v; }
+  fset(id) {
+    var self = this;
+    return function (e) {
+      var val = e.target.value;
+      self.setState(function (s) { return { form: Object.assign({}, s.form, { [id]: val }) }; });
+    };
+  }
+  field(id, label, def, opt) {
+    opt = opt || {};
+    return {
+      label: label, value: this.fv(id, def), onChange: this.fset(id),
+      isSelect: opt.kind === 'select', isArea: opt.kind === 'area', isText: !opt.kind || opt.kind === 'text',
+      type: opt.type || 'text', placeholder: opt.placeholder || '', options: opt.options || [],
+      span: opt.wide ? '1 / -1' : 'auto', rows: opt.tall ? '120px' : '76px'
+    };
+  }
+  ctxOpts() { return this.state.S.settings.contexts.map(function (c) { return { value: c, label: c }; }); }
+
+  /* ---------- actions ---------- */
+  setView(v) {
+    this.setState({ view: v, wz: null, openForm: null, form: {}, justReviewed: false });
+  }
+  capture() {
+    var t = (this.state.cap || '').trim();
+    if (!t) return;
+    var self = this;
+    this.commit(function (S) { S.inbox.unshift({ id: self.nid(), text: t, captured: self.nowIso() }); }, { cap: '' });
+  }
+  toggleDone(list, id) {
+    var self = this;
+    this.commit(function (S) {
+      var it = S[list].find(function (x) { return x.id === id; });
+      if (!it) return;
+      it.done = !it.done;
+      if (it.done) it.completed = self.nowIso(); else delete it.completed;
+    });
+  }
+  remove(list, id) {
+    this.commit(function (S) { S[list] = S[list].filter(function (x) { return x.id !== id; }); });
+  }
+
+  /* ---------- drag & drop ---------- */
+  dragStart(list, id) {
+    var self = this;
+    return function (e) { e.dataTransfer.effectAllowed = 'move'; self.setState({ drag: { list: list, id: id } }); };
+  }
+  dragOverItem(list, id) {
+    var self = this;
+    return function (e) {
+      var d = self.state.drag;
+      if (!d || d.list !== list) return;
+      e.preventDefault();
+      var o = self.state.over;
+      if (!o || o.kind !== 'item' || o.id !== id) self.setState({ over: { kind: 'item', list: list, id: id } });
+    };
+  }
+  dropItem(list, id) {
+    var self = this;
+    return function (e) {
+      e.preventDefault();
+      var d = self.state.drag;
+      if (!d || d.list !== list || d.id === id) { self.setState({ drag: null, over: null }); return; }
+      self.commit(function (S) {
+        var arr = S[list];
+        var from = arr.findIndex(function (x) { return x.id === d.id; });
+        var item = arr.splice(from, 1)[0];
+        var to = arr.findIndex(function (x) { return x.id === id; });
+        arr.splice(to < 0 ? arr.length : to, 0, item);
+      }, { drag: null, over: null });
+    };
+  }
+  dragEnd() { var self = this; return function () { self.setState({ drag: null, over: null }); }; }
+  dragOverZone(key) {
+    var self = this;
+    return function (e) {
+      if (!self.state.drag) return;
+      e.preventDefault();
+      var o = self.state.over;
+      if (!o || o.kind !== 'zone' || o.key !== key) self.setState({ over: { kind: 'zone', key: key } });
+    };
+  }
+  dropContext(ctx) {
+    var self = this;
+    return function (e) {
+      e.preventDefault();
+      var d = self.state.drag;
+      if (!d || d.list !== 'nextActions') { self.setState({ drag: null, over: null }); return; }
+      self.commit(function (S) {
+        var it = S.nextActions.find(function (x) { return x.id === d.id; });
+        if (it) it.context = ctx;
+      }, { drag: null, over: null });
+    };
+  }
+  dropStatus(status) {
+    var self = this;
+    return function (e) {
+      e.preventDefault();
+      var d = self.state.drag;
+      if (!d || d.list !== 'projects') { self.setState({ drag: null, over: null }); return; }
+      self.commit(function (S) {
+        var p = S.projects.find(function (x) { return x.id === d.id; });
+        if (p) p.status = status;
+      }, { drag: null, over: null });
+    };
+  }
+  dropBucket(kind) {
+    var self = this;
+    return function (e) {
+      e.preventDefault();
+      var d = self.state.drag;
+      if (!d || d.list !== 'inbox') { self.setState({ drag: null, over: null }); return; }
+      self.commit(function (S) {
+        var it = S.inbox.find(function (x) { return x.id === d.id; });
+        if (!it) return;
+        S.inbox = S.inbox.filter(function (x) { return x.id !== d.id; });
+        if (kind === 'someday') S.somedayMaybe.unshift({ id: self.nid(), text: it.text, created: self.nowIso() });
+        if (kind === 'reference') S.reference.unshift({ id: self.nid(), text: it.text, created: self.nowIso() });
+      }, { drag: null, over: null });
+    };
+  }
+
+  /* ---------- wizard ---------- */
+  wzItem() {
+    var wz = this.state.wz;
+    if (!wz) return null;
+    return this.byId('inbox', wz.itemId) || this.state.S.inbox[0] || null;
+  }
+  wzGo(step) {
+    var self = this;
+    return function () { self.setState(function (s) { return { wz: Object.assign({}, s.wz, { step: step }) }; }); };
+  }
+  wzAfter() {
+    var s = this.state;
+    if (s.wz && s.wz.mode === 'single') { this.commit(null, { wz: null, form: {} }); return; }
+    var next = this.state.S.inbox[0];
+    if (!next) this.commit(null, { wz: { mode: 'zero', itemId: null, step: 'done', draft: {} }, form: {} });
+    else this.commit(null, { wz: { mode: 'zero', itemId: next.id, step: 'actionable', draft: {} }, form: {} });
+  }
+  wzRemoveItem(S) {
+    var id = this.state.wz.itemId;
+    S.inbox = S.inbox.filter(function (x) { return x.id !== id; });
+  }
+
+  buildWizard() {
+    var self = this, wz = this.state.wz;
+    if (!wz) return { visible: false };
+    var it = this.wzItem();
+    if (wz.step === 'done' || !it) {
+      return {
+        visible: true, done: true, hasItem: false, counter: 'Clarify',
+        onExit: function () { self.setState({ wz: null }); },
+        onFinish: function () { self.setView('engage'); }
+      };
+    }
+    var w = {
+      visible: true, done: false, hasItem: true,
+      counter: wz.mode === 'zero' ? (this.state.S.inbox.length + ' left') : 'Clarifying',
+      itemText: it.text, itemAge: this.ago(it.captured),
+      options: [], fields: [], ctxPicks: [], sub: '', submitLabel: '', altLabel: '',
+      onExit: function () { self.setState({ wz: null, form: {} }); },
+      onKey: function () {}
+    };
+    var draft = wz.draft || {};
+    var step = wz.step;
+    if (step === 'actionable') {
+      w.question = 'What is it? Is it actionable?';
+      w.options = [
+        { label: "Yes — it's actionable", onClick: this.wzGo('nextaction') },
+        { label: 'No — not actionable', onClick: this.wzGo('bucket') }
+      ];
+    } else if (step === 'bucket') {
+      w.question = 'Not actionable — where does it belong?';
+      w.options = [
+        { label: 'Trash — no value, let it go', onClick: function () { self.commit(function (S) { self.wzRemoveItem(S); }); self.wzAfter(); } },
+        { label: 'Someday / maybe — might do it, not committed', onClick: this.wzGo('someday') },
+        { label: 'Reference — no action, worth keeping', onClick: this.wzGo('reference') }
+      ];
+    } else if (step === 'someday' || step === 'reference') {
+      var toRef = step === 'reference';
+      w.question = toRef ? 'File it as reference' : 'Park it in someday / maybe';
+      w.fields = [this.field('wzText', 'Note', it.text, { kind: 'area' })];
+      w.submitLabel = toRef ? 'Save to reference' : 'Save to someday / maybe';
+      w.onSubmit = function () {
+        var t = (self.fv('wzText', it.text) || '').trim() || it.text;
+        self.commit(function (S) {
+          self.wzRemoveItem(S);
+          (toRef ? S.reference : S.somedayMaybe).unshift({ id: self.nid(), text: t, created: self.nowIso() });
+        });
+        self.wzAfter();
+      };
+    } else if (step === 'nextaction') {
+      w.question = "What's the very next physical, visible action?";
+      w.sub = 'Not "plan offsite" — that\u2019s a project. The next action is "email Jesse to ask for available dates."';
+      w.fields = [this.field('wzAction', 'Next action', '', { placeholder: 'The next physical action…' })];
+      w.submitLabel = 'Next →';
+      w.onSubmit = function () {
+        var a = (self.fv('wzAction', '') || '').trim();
+        if (!a) return;
+        self.setState(function (s) { return { wz: Object.assign({}, s.wz, { step: 'project', draft: { action: a } }) }; });
+      };
+      w.onKey = function (e) { if (e.key === 'Enter') w.onSubmit(); };
+    } else if (step === 'project') {
+      w.question = 'Does the outcome take more than one action step?';
+      w.sub = 'Next action: “' + draft.action + '”';
+      w.options = [
+        { label: 'Just this one action', onClick: this.wzGo('twomin') },
+        { label: "It's a project (multi-step)", onClick: this.wzGo('projform') }
+      ];
+    } else if (step === 'projform') {
+      w.question = 'New project';
+      w.sub = 'Its next action: “' + draft.action + '”';
+      w.fields = [
+        this.field('wzPTitle', 'Desired outcome (project name)', it.text),
+        this.field('wzPStatus', 'Status', 'active', { kind: 'select', options: [{ value: 'active', label: 'Active' }, { value: 'ondeck', label: 'On-deck' }, { value: 'backlog', label: 'Backlog' }] }),
+        this.field('wzPCtx', 'Context for next action', '@Computer', { kind: 'select', options: this.ctxOpts() })
+      ];
+      w.submitLabel = 'Create project + next action';
+      w.onSubmit = function () {
+        var title = (self.fv('wzPTitle', it.text) || '').trim() || it.text;
+        var status = self.fv('wzPStatus', 'active');
+        var ctx = self.fv('wzPCtx', '@Computer');
+        self.commit(function (S) {
+          self.wzRemoveItem(S);
+          var pid = self.nid();
+          S.projects.unshift({ id: pid, title: title, status: status, outcome: '', created: self.nowIso(), done: false });
+          S.nextActions.unshift({ id: self.nid(), text: draft.action, context: ctx, projectId: pid, created: self.nowIso(), done: false });
+        });
+        self.wzAfter();
+      };
+    } else if (step === 'twomin') {
+      w.question = 'Will the next action take less than two minutes?';
+      w.sub = '“' + draft.action + '”';
+      w.options = [
+        { label: "Yes — I'll do it now", onClick: this.wzGo('donow') },
+        { label: "No — it'll take longer", onClick: this.wzGo('deldef') }
+      ];
+    } else if (step === 'donow') {
+      w.question = 'Do it now.';
+      w.sub = 'If it takes less than two minutes, doing it is faster than tracking it. Go do it, then tick it off.';
+      w.submitLabel = '✓ Done — I did it';
+      w.onSubmit = function () { self.commit(function (S) { self.wzRemoveItem(S); }); self.wzAfter(); };
+      w.altLabel = 'Actually, it needs to be deferred →';
+      w.onAlt = this.wzGo('deldef');
+    } else if (step === 'deldef') {
+      w.question = 'Are you the right person to do it?';
+      w.options = [
+        { label: 'Delegate it — someone else', onClick: this.wzGo('waiting') },
+        { label: "Defer it — I'll do it later", onClick: this.wzGo('specific') }
+      ];
+    } else if (step === 'waiting') {
+      w.question = 'Waiting for — hand it off';
+      w.fields = [
+        this.field('wzWho', 'Who has it?', '', { placeholder: 'Name' }),
+        this.field('wzWhat', "What you're waiting on", draft.action)
+      ];
+      w.submitLabel = 'Add to waiting for (dated today)';
+      w.onSubmit = function () {
+        var who = (self.fv('wzWho', '') || '').trim();
+        if (!who) return;
+        var what = (self.fv('wzWhat', draft.action) || '').trim() || draft.action;
+        self.commit(function (S) {
+          self.wzRemoveItem(S);
+          S.waitingFor.unshift({ id: self.nid(), what: what, who: who, delegated: self.nowIso(), done: false });
+        });
+        self.wzAfter();
+      };
+    } else if (step === 'specific') {
+      w.question = 'Must it happen on a specific day or time?';
+      w.sub = 'The calendar is sacred: only day- or time-specific commitments. Everything else is a next action.';
+      w.options = [
+        { label: "Yes — it's a hard landscape item", onClick: this.wzGo('calendar') },
+        { label: "No — I'll do it when I can", onClick: this.wzGo('context') }
+      ];
+    } else if (step === 'calendar') {
+      w.question = 'Put it on the calendar';
+      w.fields = [
+        this.field('wzText', 'What', draft.action),
+        this.field('wzDate', 'Date', this.todayStr(), { type: 'date' }),
+        this.field('wzTime', 'Time (optional)', '', { type: 'time' }),
+        this.field('wzKind', 'Type', 'appointment', { kind: 'select', options: [{ value: 'appointment', label: 'Time-specific appointment' }, { value: 'action', label: 'Day-specific action' }, { value: 'info', label: 'Day-specific information' }] })
+      ];
+      w.submitLabel = 'Add to calendar';
+      w.onSubmit = function () {
+        var d = self.fv('wzDate', self.todayStr());
+        if (!d) return;
+        var t = (self.fv('wzText', draft.action) || '').trim() || draft.action;
+        var time = self.fv('wzTime', '');
+        var kind = self.fv('wzKind', 'appointment');
+        self.commit(function (S) {
+          self.wzRemoveItem(S);
+          S.calendar.unshift({ id: self.nid(), text: t, date: d, time: time || null, kind: kind, created: self.nowIso() });
+        });
+        self.wzAfter();
+      };
+    } else if (step === 'context') {
+      w.question = 'Which context — where can you do it?';
+      w.ctxPicks = this.state.S.settings.contexts.map(function (c) {
+        var col = self.ctxColor(c);
+        return {
+          label: c, bg: col.bg, fg: col.fg, dot: col.dot,
+          onClick: function () {
+            self.commit(function (S) {
+              self.wzRemoveItem(S);
+              S.nextActions.unshift({ id: self.nid(), text: draft.action, context: c, projectId: null, created: self.nowIso(), done: false });
+            });
+            self.wzAfter();
+          }
+        };
+      });
+    }
+    return w;
+  }
+
+  /* ---------- add panel ---------- */
+  buildAddForm() {
+    var self = this, k = this.state.openForm;
+    if (!k) return { visible: false, fields: [] };
+    var close = function () { self.setState({ openForm: null, form: {} }); };
+    var f = { visible: true, onCancel: close, onKey: function () {}, fields: [], submitLabel: 'Add' };
+    if (k === 'na') {
+      var projOpts = [{ value: '', label: '— no project —' }].concat(this.state.S.projects.filter(function (p) { return !p.done; }).map(function (p) { return { value: String(p.id), label: p.title }; }));
+      f.title = 'New next action';
+      f.fields = [
+        this.field('fNAtext', 'Next action', '', { placeholder: 'The physical next action…' }),
+        this.field('fNActx', 'Context', '@Computer', { kind: 'select', options: this.ctxOpts() }),
+        this.field('fNAproj', 'Project', '', { kind: 'select', options: projOpts })
+      ];
+      var outOpts = this.outcomeOpts();
+      if (outOpts.length > 1) f.fields.push(this.field('fNAout', 'Weekly outcome', '', { kind: 'select', options: outOpts }));
+      f.onSubmit = function () {
+        var t = (self.fv('fNAtext', '') || '').trim();
+        if (!t) return;
+        var ctx = self.fv('fNActx', '@Computer');
+        var pid = self.fv('fNAproj', '');
+        var oid = self.fv('fNAout', '');
+        self.commit(function (S) { S.nextActions.unshift({ id: self.nid(), text: t, context: ctx, projectId: pid ? +pid : null, outcomeId: oid ? +oid : null, created: self.nowIso(), done: false }); }, { openForm: null, form: {} });
+      };
+    } else if (k === 'proj') {
+      f.title = 'New project';
+      f.fields = [
+        this.field('fPtitle', 'Outcome / project name', '', { placeholder: 'What does done look like?' }),
+        this.field('fPstatus', 'Status', 'active', { kind: 'select', options: [{ value: 'active', label: 'Active' }, { value: 'ondeck', label: 'On-deck' }, { value: 'backlog', label: 'Backlog' }] }),
+        this.field('fPout', 'Success looks like (optional)', '', { placeholder: 'Outcome note' })
+      ];
+      f.onSubmit = function () {
+        var t = (self.fv('fPtitle', '') || '').trim();
+        if (!t) return;
+        var st = self.fv('fPstatus', 'active'), out = (self.fv('fPout', '') || '').trim();
+        self.commit(function (S) { S.projects.unshift({ id: self.nid(), title: t, status: st, outcome: out, created: self.nowIso(), done: false }); }, { openForm: null, form: {} });
+      };
+    } else if (k === 'wf') {
+      f.title = 'New waiting-for item';
+      f.fields = [this.field('fWwho', 'Who', '', { placeholder: 'Name' }), this.field('fWwhat', 'What', '', { placeholder: "What you're waiting on" })];
+      f.onSubmit = function () {
+        var who = (self.fv('fWwho', '') || '').trim(), what = (self.fv('fWwhat', '') || '').trim();
+        if (!who || !what) return;
+        self.commit(function (S) { S.waitingFor.unshift({ id: self.nid(), who: who, what: what, delegated: self.nowIso(), done: false }); }, { openForm: null, form: {} });
+      };
+    } else if (k === 'cal') {
+      f.title = 'New calendar item';
+      f.fields = [
+        this.field('fCtext', 'What', '', { placeholder: 'Appointment or hard deadline' }),
+        this.field('fCdate', 'Date', this.todayStr(), { type: 'date' }),
+        this.field('fCtime', 'Time (optional)', '', { type: 'time' }),
+        this.field('fCkind', 'Type', 'appointment', { kind: 'select', options: [{ value: 'appointment', label: 'Time-specific appointment' }, { value: 'action', label: 'Day-specific action' }, { value: 'info', label: 'Day-specific information' }] })
+      ];
+      f.onSubmit = function () {
+        var t = (self.fv('fCtext', '') || '').trim(), d = self.fv('fCdate', self.todayStr());
+        if (!t || !d) return;
+        var time = self.fv('fCtime', ''), kind = self.fv('fCkind', 'appointment');
+        self.commit(function (S) { S.calendar.unshift({ id: self.nid(), text: t, date: d, time: time || null, kind: kind, created: self.nowIso() }); }, { openForm: null, form: {} });
+      };
+    } else if (k === 'sm') {
+      f.title = 'New someday / maybe item';
+      f.fields = [this.field('fSMtext', 'Idea', '', { placeholder: 'Might do this someday…' })];
+      f.onSubmit = function () {
+        var t = (self.fv('fSMtext', '') || '').trim();
+        if (!t) return;
+        self.commit(function (S) { S.somedayMaybe.unshift({ id: self.nid(), text: t, created: self.nowIso() }); }, { openForm: null, form: {} });
+      };
+    } else if (k === 'ref') {
+      f.title = 'New reference note';
+      f.fields = [this.field('fRtext', 'Note', '', { kind: 'area', placeholder: 'Information to keep…' })];
+      f.onSubmit = function () {
+        var t = (self.fv('fRtext', '') || '').trim();
+        if (!t) return;
+        self.commit(function (S) { S.reference.unshift({ id: self.nid(), text: t, created: self.nowIso() }); }, { openForm: null, form: {} });
+      };
+    }
+    f.onKey = function (e) { if (e.key === 'Enter') f.onSubmit(); };
+    return f;
+  }
+
+  /* ---------- tiles ---------- */
+  dragProps(list, id) {
+    var d = this.state.drag, o = this.state.over;
+    return {
+      onDragStart: this.dragStart(list, id), onDragOver: this.dragOverItem(list, id),
+      onDrop: this.dropItem(list, id), onDragEnd: this.dragEnd(),
+      opacity: d && d.list === list && d.id === id ? '0.45' : '1',
+      edge: o && o.kind === 'item' && o.list === list && o.id === id ? 'var(--color-accent)' : 'var(--color-divider)'
+    };
+  }
+  actionTile(a) {
+    var self = this, col = this.ctxColor(a.context);
+    return Object.assign({
+      text: a.text || 'Add the physical next action…',
+      ctx: a.context, ctxBg: col.bg, ctxFg: col.fg,
+      project: a.projectId ? this.projTitle(a.projectId) : null,
+      age: this.ago(a.created),
+      cbEdge: a.done ? 'var(--color-accent-2-600)' : 'var(--color-neutral-400)',
+      cbBg: a.done ? 'var(--color-accent-2-500)' : 'transparent',
+      cbInk: a.done ? 'var(--color-bg)' : 'transparent',
+      onToggle: function () { self.toggleDone('nextActions', a.id); },
+      onDelete: function () { self.remove('nextActions', a.id); }
+    }, this.dragProps('nextActions', a.id));
+  }
+
+  /* ---------- daily routine: data ---------- */
+  thisWeek() { return this.isoWeek(this.todayStr()); }
+  weekOutcomes(wk) { var w = this.state.S.weeks[wk]; return w && Array.isArray(w.outcomes) ? w.outcomes : []; }
+  outcomeById(id) {
+    if (!id) return null;
+    var weeks = this.state.S.weeks, hit = null;
+    Object.keys(weeks).forEach(function (k) { (weeks[k].outcomes || []).forEach(function (o) { if (o.id === id) hit = o; }); });
+    return hit;
+  }
+  outcomeOpts() {
+    return [{ value: '', label: '— none —' }].concat(this.weekOutcomes(this.thisWeek()).map(function (o) { return { value: String(o.id), label: o.text }; }));
+  }
+  prevWeekKey(wk) {
+    var weeks = this.state.S.weeks;
+    var keys = Object.keys(weeks).filter(function (k) { return k < wk && weeks[k].outcomes.length; }).sort();
+    return keys.length ? keys[keys.length - 1] : null;
+  }
+  logKeysDesc() { return Object.keys(this.state.S.dayLog).sort().reverse(); }
+  // Key of the plan made by today's wrap-up, if there is one.
+  wrappedKey(today) {
+    var log = this.state.S.dayLog;
+    return this.logKeysDesc().filter(function (k) { return log[k].firstMove && log[k].wrappedOn === today; })
+      .sort(function (a, b) { return String(log[b].wrappedAt) < String(log[a].wrappedAt) ? -1 : 1; })[0] || null;
+  }
+  // Latest first move up to `day` that wasn't finished; offered as the default next time.
+  carryCandidate(day) {
+    var log = this.state.S.dayLog;
+    var k = this.logKeysDesc().find(function (x) { return x <= day && log[x].firstMove && !log[x].movedTo; });
+    if (!k) return null;
+    var e = log[k], a = e.actionId ? this.byId('nextActions', e.actionId) : null;
+    if (e.status === 'done' || (a && a.done)) return null;
+    return { key: k, entry: e, action: a };
+  }
+  // Today's plan, or an unstarted one from the past week (a wrap-up that targeted a day you didn't work).
+  pendingPlan(today) {
+    var log = this.state.S.dayLog, from = this.addDays(today, -7);
+    if (log[today] && log[today].firstMove) return { key: today, entry: log[today] };
+    var k = this.logKeysDesc().find(function (x) {
+      var p = log[x];
+      return x < today && x >= from && p.firstMove && !p.startedAt && !p.status && !p.movedTo;
+    });
+    return k ? { key: k, entry: log[k] } : null;
+  }
+
+  /* ---------- daily routine: choosing a first move ---------- */
+  movePrefill(entry, carry) {
+    var S = this.state.S, src = entry || (carry && carry.entry);
+    var f = { rtCtx: S.settings.contexts[0] || '@Computer', rtPick: '' };
+    if (src) {
+      var a = src.actionId ? this.byId('nextActions', src.actionId) : null;
+      f.rtPick = a && !a.done ? 'a:' + a.id : 'new';
+      if (f.rtPick === 'new') f.rtNewText = src.firstMove;
+      f.rtDone = src.doneDef || '';
+      f.rtEst = src.estimateMin ? String(src.estimateMin) : '';
+      var inWeek = this.weekOutcomes(this.thisWeek()).some(function (o) { return o.id === src.outcomeId; });
+      f.rtOut = inWeek ? String(src.outcomeId) : '';
+      if (entry) { f.rtStep = entry.firstStep || ''; f.rtLeft = entry.leftOff || ''; }
+    }
+    if (!f.rtPick && !S.nextActions.some(function (a) { return !a.done && a.text; })) f.rtPick = 'new';
+    return f;
+  }
+  movePicks() {
+    var self = this, S = this.state.S, rt = this.state.rt, sel = this.fv('rtPick', '');
+    var wkIds = this.weekOutcomes(this.thisWeek()).map(function (o) { return o.id; });
+    var rank = function (a) {
+      if (a.id === rt.carryAid) return 0;
+      if (a.outcomeId && wkIds.indexOf(a.outcomeId) >= 0) return 1;
+      var p = a.projectId ? self.byId('projects', a.projectId) : null;
+      return p && !p.done && (p.status || 'active') === 'active' ? 2 : 3;
+    };
+    var open = S.nextActions.filter(function (a) { return !a.done && a.text; })
+      .map(function (a, i) { return { a: a, i: i, r: rank(a) }; })
+      .sort(function (x, y) { return x.r - y.r || x.i - y.i; });
+    var limit = rt.all ? open.length : 8;
+    var shown = open.slice(0, limit);
+    var selRow = open.find(function (x) { return 'a:' + x.a.id === sel; });
+    if (selRow && shown.indexOf(selRow) < 0) shown.push(selRow);
+    var pickView = function (key, text, meta, tag, patch) {
+      var on = sel === key;
+      return {
+        text: text, meta: meta, tag: tag,
+        bg: on ? 'var(--color-accent-200)' : 'var(--color-surface)',
+        edge: on ? 'var(--color-accent)' : 'var(--color-divider)',
+        dot: on ? 'var(--color-accent)' : 'transparent',
+        onClick: function () { self.rtSet({}, Object.assign({ rtPick: key }, patch || {})); }
+      };
+    };
+    var picks = shown.map(function (x) {
+      var a = x.a, linked = a.outcomeId && wkIds.indexOf(a.outcomeId) >= 0 ? self.outcomeById(a.outcomeId) : null;
+      var meta = [a.context, a.projectId ? self.projTitle(a.projectId) : null, linked ? '→ ' + linked.text : null].filter(Boolean).join(' · ');
+      var patch = linked && !self.fv('rtOut', '') ? { rtOut: String(linked.id) } : null;
+      return pickView('a:' + a.id, a.text, meta, x.r === 0 ? 'Not finished' : x.r === 1 ? 'Weekly outcome' : '', patch);
+    });
+    picks.push(pickView('new', '+ Type a new one', '', ''));
+    return { picks: picks, more: open.length > limit ? 'Show all ' + open.length + ' next actions' : '' };
+  }
+  moveFields(withDate) {
+    var S = this.state.S, f = [];
+    if (this.fv('rtPick', '') === 'new') {
+      f.push(this.field('rtNewText', 'New first move', '', { wide: true, placeholder: 'e.g. Finalize the store banding tiers' }));
+      f.push(this.field('rtCtx', 'Context', S.settings.contexts[0] || '@Computer', { kind: 'select', options: this.ctxOpts() }));
+    }
+    f.push(this.field('rtStep', 'First physical step', '', { wide: true, placeholder: 'e.g. open the banding query and check store tier counts' }));
+    f.push(this.field('rtDone', 'Done looks like (optional)', '', { wide: true, placeholder: 'What counts as finished for this block?' }));
+    var outs = this.outcomeOpts();
+    if (outs.length > 1) f.push(this.field('rtOut', 'Supports outcome (optional)', '', { kind: 'select', options: outs }));
+    f.push(this.field('rtEst', 'Estimated time (optional)', '', { kind: 'select', options: [['', '—'], ['30', '30 min'], ['45', '45 min'], ['60', '60 min'], ['75', '75 min'], ['90', '90 min'], ['120', '2 hours']].map(function (o) { return { value: o[0], label: o[1] }; }) }));
+    if (withDate) f.push(this.field('rtDate', 'For', '', { type: 'date' }));
+    return f;
+  }
+  readMove() {
+    var pick = this.fv('rtPick', ''), a = null, text = '';
+    if (pick.indexOf('a:') === 0) { a = this.byId('nextActions', +pick.slice(2)); text = a ? a.text : ''; }
+    else if (pick === 'new') text = (this.fv('rtNewText', '') || '').trim();
+    var step = (this.fv('rtStep', '') || '').trim();
+    if (!text) return { err: pick === 'new' ? 'Type the first move.' : 'Pick a next action, or choose “Type a new one”.' };
+    if (!step) return { err: 'Add the first physical step: something concrete you can start without thinking.' };
+    var est = this.fv('rtEst', ''), out = this.fv('rtOut', '');
+    return {
+      text: text, actionId: a ? a.id : null, ctx: this.fv('rtCtx', this.state.S.settings.contexts[0] || '@Computer'),
+      step: step, doneDef: (this.fv('rtDone', '') || '').trim(), outcomeId: out ? +out : null, estimateMin: est ? +est : null
+    };
+  }
+  // Writes a chosen move into a day-log entry. A typed move also becomes a real next action.
+  applyMove(S, e, m) {
+    var aid = m.actionId;
+    if (!aid) {
+      aid = this.nid();
+      S.nextActions.unshift({ id: aid, text: m.text, context: m.ctx, projectId: null, outcomeId: m.outcomeId, created: this.nowIso(), done: false });
+    }
+    var act = S.nextActions.find(function (x) { return x.id === aid; });
+    if (act && m.outcomeId) act.outcomeId = m.outcomeId;
+    Object.assign(e, { firstMove: m.text, actionId: aid, firstStep: m.step, doneDef: m.doneDef, outcomeId: m.outcomeId, estimateMin: m.estimateMin });
+  }
+  moveCard(e, kicker, big) {
+    var o = this.outcomeById(e.outcomeId), rows = [];
+    if (e.firstStep) rows.push({ label: 'First physical step', text: e.firstStep });
+    if (e.doneDef) rows.push({ label: 'Done looks like', text: e.doneDef });
+    if (o) rows.push({ label: 'Supports this week’s outcome', text: o.text });
+    if (e.estimateMin) rows.push({ label: 'Time box', text: '~' + e.estimateMin + ' min' });
+    if (e.leftOff) rows.push({ label: 'Where you left off', text: e.leftOff });
+    return { visible: true, kicker: kicker, move: e.firstMove, rows: rows, size: big ? '28px' : '21px' };
+  }
+
+  /* ---------- daily routine: panel plumbing ---------- */
+  rtSet(patch, form) {
+    this.setState(function (s) {
+      var next = { rt: Object.assign({}, s.rt, { err: '' }, patch) };
+      if (form) next.form = Object.assign({}, s.form, form);
+      return next;
+    });
+  }
+  closeRt() { this.setState({ rt: null, form: {}, scanEnd: null }); }
+  startZero() {
+    var first = this.state.S.inbox[0];
+    if (!first) return;
+    this.setState({ view: 'inbox', openForm: null, form: {}, rt: null, fmOn: false, wz: { mode: 'zero', itemId: first.id, step: 'actionable', draft: {} } });
+  }
+  buildRoutine() {
+    var self = this, rt = this.state.rt;
+    if (!rt) return { visible: false, card: { visible: false, rows: [] }, timer: {} };
+    var v = {
+      visible: true, title: '', counter: '', question: '', sub: '',
+      card: { visible: false, rows: [] }, hasRefs: false, refs: [], hasRows: false, rows: [],
+      hasPicks: false, picks: [], moreLabel: '', onMore: function () { self.rtSet({ all: true }); },
+      hasChecks: false, checks: [], timer: { label: '', btn: '', note: '', onClick: function () {} }, fields: [], err: rt.err || '',
+      primaryLabel: '', onPrimary: function () {}, secondaryLabel: '', onSecondary: function () {},
+      backLabel: '', onBack: function () {}, onClose: function () { self.closeRt(); }
+    };
+    var steps = rt.steps || [], idx = steps.indexOf(rt.step);
+    if (idx >= 0 && steps.length > 1) v.counter = 'Step ' + (idx + 1) + ' of ' + steps.length;
+    var go = function (d) { return function () { self.rtSet({ step: steps[idx + d] }); }; };
+    if (idx > 0) { v.backLabel = '← Back'; v.onBack = go(-1); }
+    var today = this.todayStr();
+    if (rt.flow === 'wrap') this.buildWrap(v, rt, today, go);
+    else if (rt.flow === 'start') this.buildStart(v, rt, today);
+    else if (rt.flow === 'week') this.buildWeek(v, rt);
+    return v;
+  }
+
+  /* ---------- daily routine: wrap up my day ---------- */
+  openWrap() {
+    var today = this.todayStr(), key = this.wrappedKey(today), base = { openForm: null, focusOn: false, wz: null };
+    if (key) { this.setState(Object.assign(base, { rt: { flow: 'wrap', step: 'saved', key: key }, form: {} })); return; }
+    var carry = this.carryCandidate(today);
+    var hasWeek = this.weekOutcomes(this.thisWeek()).length > 0;
+    this.setState(Object.assign(base, {
+      rt: { flow: 'wrap', step: 'capture', steps: ['capture'].concat(hasWeek ? ['week'] : [], ['move', 'leftoff']), carryAid: carry && carry.action ? carry.action.id : null },
+      form: Object.assign(this.movePrefill(null, carry), { rtDate: this.nextWorkday(today) })
+    }));
+  }
+  editWrap(key) {
+    var e = this.state.S.dayLog[key];
+    this.setState({ rt: { flow: 'wrap', step: 'move', steps: ['move', 'leftoff'], editKey: key }, form: Object.assign(this.movePrefill(e, null), { rtDate: key }) });
+  }
+  captureDump() {
+    var self = this;
+    var lines = (this.fv('rtDump', '') || '').split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
+    if (lines.length) this.commit(function (S) { lines.slice().reverse().forEach(function (t) { S.inbox.unshift({ id: self.nid(), text: t, captured: self.nowIso() }); }); });
+  }
+  saveWrap() {
+    var self = this, rt = this.state.rt, today = this.todayStr();
+    var m = this.readMove(), target = this.fv('rtDate', '');
+    if (m.err) { this.rtSet({ step: 'move', err: m.err }); return; }
+    if (!target || target <= today) { this.rtSet({ step: 'move', err: 'Pick a day after today.' }); return; }
+    var left = (this.fv('rtLeft', '') || '').trim();
+    this.commit(function (S) {
+      if (rt.editKey && rt.editKey !== target && S.dayLog[rt.editKey] && !S.dayLog[rt.editKey].startedAt) delete S.dayLog[rt.editKey];
+      var e = S.dayLog[target] || (S.dayLog[target] = {});
+      self.applyMove(S, e, m);
+      e.leftOff = left; e.wrappedAt = self.nowIso(); e.wrappedOn = today;
+    }, { rt: { flow: 'wrap', step: 'saved', key: target }, form: {} });
+  }
+  buildWrap(v, rt, today, go) {
+    var self = this, S = this.state.S;
+    v.title = 'Wrap up my day';
+    if (rt.step === 'capture') {
+      v.question = 'Anything nagging at you?';
+      v.sub = 'Dump it here, one thing per line. Each line lands in your Inbox; no sorting now.';
+      v.fields = [this.field('rtDump', 'Quick capture', '', { kind: 'area', tall: true, wide: true, placeholder: 'One loose end per line…' })];
+      v.primaryLabel = 'Next →';
+      v.onPrimary = function () { self.captureDump(); self.rtSet({ step: rt.steps[1] }, { rtDump: '' }); };
+    } else if (rt.step === 'week') {
+      v.question = 'This week’s outcomes';
+      v.sub = 'Keep these in view while you choose what comes next.';
+      v.hasRefs = true; v.refs = this.weekRefs();
+      v.primaryLabel = 'Next →'; v.onPrimary = go(1);
+    } else if (rt.step === 'move') {
+      var target = this.fv('rtDate', '') || this.nextWorkday(today);
+      var day = this.dayName(target, today);
+      v.question = 'Choose ' + day + '’s first move';
+      v.sub = 'Exactly one. Decide it now, while you still have today’s context' +
+        (day !== 'tomorrow' && target === this.nextWorkday(today) ? '. ' + this.cap1(day) + ' is your next workday.' : '.');
+      var pk = this.movePicks();
+      v.hasPicks = true; v.picks = pk.picks; v.moreLabel = pk.more;
+      v.fields = this.moveFields(true);
+      v.primaryLabel = 'Next →';
+      v.onPrimary = function () {
+        var m = self.readMove(), t = self.fv('rtDate', '');
+        if (m.err) return self.rtSet({ err: m.err });
+        if (!t || t <= today) return self.rtSet({ err: 'Pick a day after today.' });
+        go(1)();
+      };
+    } else if (rt.step === 'leftoff') {
+      v.question = 'Where did you leave off?';
+      v.sub = 'Optional. A few words for future you about the state of today’s work.';
+      v.fields = [this.field('rtLeft', 'Where I left off', '', { kind: 'area', tall: true, wide: true, placeholder: 'e.g. Query runs; tier 3 counts look off. Check the Feb import first.' })];
+      v.primaryLabel = 'Save & wrap up'; v.onPrimary = function () { self.saveWrap(); };
+    } else if (rt.step === 'saved') {
+      var e = S.dayLog[rt.key] || {}, dn = this.dayName(rt.key, today);
+      v.question = 'Wrapped up. ' + this.cap1(dn) + '’s first move is set.';
+      v.sub = 'Saved at ' + new Date(e.wrappedAt).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) + '. Nothing left to decide until then.';
+      v.card = this.moveCard(e, 'First move · ' + (dn === 'tomorrow' ? 'tomorrow' : 'for ' + dn), false);
+      v.primaryLabel = 'Close'; v.onPrimary = function () { self.closeRt(); };
+      v.secondaryLabel = 'Edit'; v.onSecondary = function () { self.editWrap(rt.key); };
+    }
+  }
+  weekRefs() { return this.weekOutcomes(this.thisWeek()).map(function (o, i) { return { n: String(i + 1), text: o.text }; }); }
+
+  /* ---------- daily routine: start my day ---------- */
+  openStart() {
+    var S = this.state.S, today = this.todayStr(), e = S.dayLog[today] || {};
+    var base = { openForm: null, focusOn: false, wz: null, form: {} };
+    if (e.focusStartedAt && !e.status) { this.setState(Object.assign(base, { rt: null, fmOn: true, fmPhase: 'work' })); return; }
+    if (e.status) { this.setState(Object.assign(base, { rt: { flow: 'start', step: 'finished' } })); return; }
+    var w = S.weeks[this.thisWeek()];
+    if (!e.startedAt && !(w && (w.outcomes.length || w.skipped))) { this.openWeek('start'); return; }
+    this.beginStart();
+  }
+  beginStart() {
+    var self = this, today = this.todayStr(), plan = this.pendingPlan(today), stage = 'pick';
+    var carry = plan ? null : this.carryCandidate(today);
+    this.commit(function (S) {
+      var e = S.dayLog[today] || (S.dayLog[today] = {});
+      if (plan && plan.key !== today) {
+        ['firstMove', 'actionId', 'firstStep', 'doneDef', 'outcomeId', 'estimateMin', 'leftOff', 'wrappedAt', 'wrappedOn'].forEach(function (k) {
+          if (plan.entry[k] !== undefined) e[k] = plan.entry[k];
+        });
+        e.plannedFor = plan.key;
+        S.dayLog[plan.key].movedTo = today;
+      }
+      if (!e.startedAt) e.startedAt = self.nowIso();
+      if (!e.warmup) e.warmup = {};
+      if (e.firstMove) stage = e.stage === 'warmup' ? 'warmup' : 'continuity';
+    });
+    this.setState({
+      rt: { flow: 'start', step: stage, carryAid: carry && carry.action ? carry.action.id : null },
+      form: stage === 'pick' ? this.movePrefill(null, carry) : {}, openForm: null, focusOn: false, wz: null
+    });
+  }
+  beginFocus() {
+    var self = this, today = this.todayStr(), dd = (this.fv('rtDone', '') || '').trim();
+    this.commit(function (S) {
+      var e = S.dayLog[today];
+      if (dd && !e.doneDef) e.doneDef = dd;
+      e.focusStartedAt = self.nowIso(); e.stage = 'focus';
+    }, { rt: null, form: {}, scanEnd: null, fmOn: true, fmPhase: 'work', focusOn: false });
+  }
+  finishMove(st) {
+    var self = this, today = this.todayStr();
+    this.commit(function (S) {
+      var e = S.dayLog[today];
+      e.status = st; e.statusAt = self.nowIso(); e.stage = 'done';
+      if (st === 'done' && e.actionId) {
+        var a = S.nextActions.find(function (x) { return x.id === e.actionId; });
+        if (a && !a.done) { a.done = true; a.completed = self.nowIso(); }
+      }
+    }, { fmPhase: 'after' });
+  }
+  scanTimer() {
+    var self = this, end = this.state.scanEnd;
+    var start = function () { self.setState({ scanEnd: Date.now() + 300000 }); };
+    if (!end) return { label: '5:00', btn: 'Start timer', note: '', onClick: start };
+    var left = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+    if (!left) return { label: '0:00', btn: 'Restart', note: 'Time’s up. Close email.', onClick: start };
+    return { label: Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0'), btn: 'Stop', note: '', onClick: function () { self.setState({ scanEnd: null }); } };
+  }
+  buildStart(v, rt, today) {
+    var self = this, S = this.state.S, e = S.dayLog[today] || {};
+    var setStage = function (st) {
+      self.commit(function (S2) { if (S2.dayLog[today]) S2.dayLog[today].stage = st; });
+      self.rtSet({ step: st });
+    };
+    v.title = 'Start my day';
+    if (rt.step === 'continuity') {
+      v.question = 'Here’s where you start.';
+      var on = e.wrappedOn, when = !on ? '' : on === this.addDays(today, -1) ? 'yesterday'
+        : 'on ' + this.parseD(on).toLocaleDateString(undefined, on >= this.addDays(today, -6) ? { weekday: 'long' } : { month: 'short', day: 'numeric' });
+      v.sub = when ? 'You decided this ' + when + ', at your wrap-up. Nothing to decide now.' : '';
+      v.card = this.moveCard(e, 'Today’s first move', true);
+      v.primaryLabel = 'Continue →'; v.onPrimary = function () { setStage('warmup'); };
+      v.secondaryLabel = 'Choose something else';
+      v.onSecondary = function () { self.rtSet({ step: 'pick' }, self.movePrefill(e, null)); };
+    } else if (rt.step === 'pick') {
+      v.question = e.firstMove ? 'Choose a different first move' : 'No first move saved. Pick one now.';
+      v.sub = 'Just one. Actions linked to this week’s outcomes are listed first.';
+      var pk = this.movePicks();
+      v.hasPicks = true; v.picks = pk.picks; v.moreLabel = pk.more;
+      v.fields = this.moveFields(false);
+      v.primaryLabel = 'Continue →';
+      v.onPrimary = function () {
+        var m = self.readMove();
+        if (m.err) return self.rtSet({ err: m.err });
+        self.commit(function (S2) {
+          var e2 = S2.dayLog[today] || (S2.dayLog[today] = { startedAt: self.nowIso(), warmup: {} });
+          self.applyMove(S2, e2, m);
+          e2.stage = 'warmup';
+        });
+        self.rtSet({ step: 'warmup' });
+      };
+      if (e.firstMove) { v.backLabel = '← Back'; v.onBack = function () { self.rtSet({ step: 'continuity' }); }; }
+    } else if (rt.step === 'warmup') {
+      var wu = e.warmup || {};
+      var mk = function (key, label, sub, timer) {
+        var ck = !!wu[key];
+        return {
+          label: label, sub: sub, timer: !!timer,
+          bg: ck ? 'var(--color-accent-2-100)' : 'var(--color-surface)',
+          cbEdge: ck ? 'var(--color-accent-2-600)' : 'var(--color-neutral-400)',
+          cbBg: ck ? 'var(--color-accent-2-500)' : 'transparent',
+          cbInk: ck ? 'var(--color-bg)' : 'transparent',
+          onToggle: function () {
+            self.commit(function (S2) { var d = S2.dayLog[today]; d.warmup = d.warmup || {}; d.warmup[key] = !d.warmup[key]; });
+          }
+        };
+      };
+      v.question = 'Warm up';
+      v.sub = 'A couple of minutes. Tick what helps; none of it is required.';
+      v.card = { visible: true, kicker: 'Today’s first move', move: e.firstMove, size: '19px', rows: e.firstStep ? [{ label: 'First physical step', text: e.firstStep }] : [] };
+      v.hasChecks = true;
+      v.checks = [
+        mk('reread', 'Reread where I left off', e.leftOff || 'No note was saved last time.'),
+        mk('done', 'Confirm what “done” looks like for this block', e.doneDef || 'Not defined yet. Add it below if it helps.'),
+        mk('scan', 'Optional: 5-minute fire scan of email', 'Urgent items only. No replies.', true)
+      ];
+      v.timer = this.scanTimer();
+      if (!e.doneDef) v.fields = [this.field('rtDone', 'Done looks like (optional)', '', { wide: true, placeholder: 'What counts as finished for this block?' })];
+      v.primaryLabel = 'Begin →'; v.onPrimary = function () { self.beginFocus(); };
+      v.backLabel = '← Back'; v.onBack = function () { setStage('continuity'); };
+    } else if (rt.step === 'finished') {
+      var labels = { done: 'done ✓', progress: 'made progress', notyet: 'didn’t get to it' };
+      v.question = 'You’ve already started today.';
+      v.sub = 'First move: ' + (labels[e.status] || '') + '. ' + (S.inbox.length ? 'A good next activity: process your inbox.' : 'Your inbox is clear.');
+      v.card = this.moveCard(e, 'Today’s first move', false);
+      if (S.inbox.length) { v.primaryLabel = 'Process inbox (' + S.inbox.length + ') →'; v.onPrimary = function () { self.startZero(); }; }
+      else { v.primaryLabel = 'Close'; v.onPrimary = function () { self.closeRt(); }; }
+      if (e.status !== 'done') {
+        v.secondaryLabel = 'Back to it';
+        v.onSecondary = function () {
+          self.commit(function (S2) { var d = S2.dayLog[today]; delete d.status; delete d.statusAt; d.focusStartedAt = self.nowIso(); d.stage = 'focus'; },
+            { rt: null, fmOn: true, fmPhase: 'work' });
+        };
+      }
+    }
+  }
+  buildFm() {
+    var self = this, S = this.state.S, e = S.dayLog[this.todayStr()];
+    if (!this.state.fmOn || !e || !e.firstMove) return { visible: false };
+    var ph = this.state.fmPhase;
+    var mins = e.focusStartedAt ? Math.max(0, Math.floor((Date.now() - new Date(e.focusStartedAt).getTime()) / 60000)) : 0;
+    var el = mins < 1 ? 'Just started' : mins < 60 ? mins + ' min' : Math.floor(mins / 60) + ' h ' + (mins % 60) + ' min';
+    if (e.estimateMin) el += (mins < 1 ? ' · ~' + e.estimateMin + ' min block' : ' of ~' + e.estimateMin + ' min');
+    var show = S.settings.showElapsed !== false;
+    var n = S.inbox.length;
+    var after = { done: ['Done. Nice work.', ''], progress: ['Progress logged.', 'It’ll be the default choice in your next wrap-up.'], notyet: ['That happens.', 'It’ll be the default choice in your next wrap-up.'] }[e.status] || ['', ''];
+    var set = function (st) { return function () { self.finishMove(st); }; };
+    return {
+      visible: true, move: e.firstMove, step: e.firstStep || '', doneDef: e.doneDef || '',
+      working: ph === 'work', asking: ph === 'ask', after: ph === 'after',
+      showTime: show, elapsed: el, timeToggle: show ? 'hide time' : 'show time',
+      onToggleTime: function () { self.commit(function (S2) { S2.settings.showElapsed = !show; }); },
+      onStop: function () { self.setState({ fmPhase: 'ask' }); },
+      onResume: function () { self.setState({ fmPhase: 'work' }); },
+      onDone: set('done'), onProgress: set('progress'), onNotYet: set('notyet'),
+      afterTitle: after[0],
+      afterBody: (after[1] ? after[1] + ' ' : '') + (n ? 'Next up: process your inbox. ' + n + ' item' + (n === 1 ? ' is' : 's are') + ' waiting.' : 'Your inbox is already clear.'),
+      inboxN: n, inboxLabel: 'Process inbox (' + n + ') →',
+      onInbox: function () { self.startZero(); },
+      onClose: function () { self.setState({ fmOn: false }); }
+    };
+  }
+
+  /* ---------- daily routine: weekly outcomes ---------- */
+  openWeek(then) {
+    var S = this.state.S, wk = this.thisWeek(), w = S.weeks[wk], prev = this.prevWeekKey(wk);
+    var needPrev = !!prev && !(w && w.prevReviewed) && S.weeks[prev].outcomes.some(function (o) { return !o.status || o.status === 'open'; });
+    var form = {};
+    (w ? w.outcomes : []).forEach(function (o, i) { form['rtO' + i] = o.text; });
+    this.setState({
+      rt: { flow: 'week', step: needPrev ? 'prev' : 'set', steps: needPrev ? ['prev', 'set'] : ['set'], then: then || null, prevKey: prev, carry: {} },
+      form: form, openForm: null, focusOn: false, wz: null
+    });
+  }
+  afterWeek(then) { if (then === 'start') this.beginStart(); else this.closeRt(); }
+  buildWeek(v, rt) {
+    var self = this, S = this.state.S, wk = this.thisWeek();
+    v.title = 'Weekly outcomes';
+    if (rt.then === 'start') {
+      v.secondaryLabel = 'Not this week';
+      v.onSecondary = function () {
+        self.commit(function (S2) { (S2.weeks[wk] || (S2.weeks[wk] = { outcomes: [] })).skipped = true; });
+        self.afterWeek('start');
+      };
+    }
+    if (rt.step === 'prev') {
+      var pw = S.weeks[rt.prevKey];
+      v.question = 'First, how did last week go?';
+      v.sub = 'Mark each outcome. Anything you carry forward pre-fills this week.';
+      v.hasRows = true;
+      v.rows = pw.outcomes.map(function (o) {
+        var cur = self.fv('rtP' + o.id, o.status && o.status !== 'open' ? o.status : '');
+        return {
+          text: o.text,
+          opts: [['achieved', 'Achieved ✓'], ['carried', 'Carry forward →'], ['dropped', 'Drop']].map(function (x) {
+            var on = cur === x[0];
+            return {
+              label: x[1],
+              bg: on ? 'var(--color-accent-500)' : 'var(--color-neutral-100)',
+              fg: on ? 'var(--color-bg)' : 'var(--color-neutral-800)',
+              border: on ? 'var(--color-accent-500)' : 'var(--color-divider)',
+              onClick: function () { self.rtSet({}, { ['rtP' + o.id]: x[0] }); }
+            };
+          })
+        };
+      });
+      v.primaryLabel = 'Next →';
+      v.onPrimary = function () {
+        var marks = {}, missing = false;
+        pw.outcomes.forEach(function (o) {
+          var p = self.fv('rtP' + o.id, o.status && o.status !== 'open' ? o.status : '');
+          if (!p) missing = true;
+          marks[o.id] = p;
+        });
+        if (missing) return self.rtSet({ err: 'Mark each of last week’s outcomes first.' });
+        // Keep anything already typed for this week; carried outcomes fill the empty slots.
+        var slots = [0, 1, 2].map(function (i) { return (self.fv('rtO' + i, '') || '').trim(); });
+        var carry = {};
+        pw.outcomes.filter(function (o) { return marks[o.id] === 'carried'; }).forEach(function (o) {
+          if (slots.indexOf(o.text) >= 0) return;
+          var i = slots.indexOf('');
+          if (i >= 0) { slots[i] = o.text; carry[i] = o.id; }
+        });
+        self.commit(function (S2) {
+          S2.weeks[rt.prevKey].outcomes.forEach(function (o) { o.status = marks[o.id]; });
+          (S2.weeks[wk] || (S2.weeks[wk] = { outcomes: [] })).prevReviewed = true;
+        });
+        self.rtSet({ step: 'set', carry: carry }, { rtO0: slots[0], rtO1: slots[1], rtO2: slots[2] });
+      };
+    } else if (rt.step === 'set') {
+      var eg = ['e.g. Banding proposal approved by finance', 'e.g. Q4 budget draft sent to Glory', 'e.g. Garage cleared enough to park in'];
+      v.question = 'What 2–3 outcomes would make this week a win?';
+      v.sub = 'Write each as a result, not a task: “proposal approved”, not “work on proposal”.';
+      v.fields = [0, 1, 2].map(function (i) {
+        return self.field('rtO' + i, 'Outcome ' + (i + 1) + (i === 2 ? ' (optional)' : ''), '', { wide: true, placeholder: eg[i] });
+      });
+      v.primaryLabel = 'Save outcomes';
+      v.onPrimary = function () {
+        var texts = [0, 1, 2].map(function (i) { return (self.fv('rtO' + i, '') || '').trim(); });
+        if (texts.filter(Boolean).length < 2) return self.rtSet({ err: 'Add at least two outcomes.' });
+        self.commit(function (S2) {
+          var w = S2.weeks[wk] || (S2.weeks[wk] = { outcomes: [] }), old = w.outcomes;
+          // Slot-for-slot: editing an outcome's wording keeps its id, so links survive.
+          w.outcomes = texts.map(function (t, i) {
+            if (!t) return null;
+            var o = old[i] ? Object.assign(old[i], { text: t }) : { id: self.nid(), text: t, status: 'open', created: self.nowIso() };
+            if (rt.carry && rt.carry[i] && !o.carriedFrom) o.carriedFrom = rt.carry[i];
+            return o;
+          }).filter(Boolean);
+          w.skipped = false;
+          w.setAt = self.nowIso();
+        });
+        self.afterWeek(rt.then);
+      };
+    }
+  }
+  dayButtons(today) {
+    var self = this, e = this.state.S.dayLog[today] || {};
+    var start = 'Start my day';
+    if (e.status) start = 'Day started ✓';
+    else if (e.focusStartedAt) start = 'Resume first move';
+    else if (e.startedAt) start = 'Resume my day';
+    return {
+      startLabel: start, wrapLabel: this.wrappedKey(today) ? 'Wrapped up ✓' : 'Wrap up my day',
+      onStart: function () { self.openStart(); }, onWrap: function () { self.openWrap(); }
+    };
+  }
+  todayMoveLine(today) {
+    var self = this, wk = this.wrappedKey(today), log = this.state.S.dayLog;
+    if (wk) return { visible: true, label: this.cap1(this.dayName(wk, today)) + '’s first move: ' + log[wk].firstMove + ' ✓', onClick: function () { self.openWrap(); } };
+    var p = this.pendingPlan(today);
+    if (!p) return { visible: false };
+    var st = { done: ' · done ✓', progress: ' · in progress', notyet: ' · not yet' }[p.entry.status] || '';
+    return { visible: true, label: 'Today’s first move: ' + p.entry.firstMove + st, onClick: function () { self.openStart(); } };
+  }
+
+  /* ---------- misc handlers ---------- */
+  onImportFile(ev) {
+    var self = this, file = ev.target.files && ev.target.files[0];
+    if (!file) return;
+    var r = new FileReader();
+    r.onload = function () {
+      try {
+        var next = self.migrate(JSON.parse(r.result));
+        self.setState({ S: next }, function () { self.save(); });
+      } catch (e) { window.alert('That file could not be read as a valid backup.'); }
+    };
+    r.readAsText(file);
+  }
+  exportData() {
+    var blob = new Blob([JSON.stringify(this.state.S, null, 2)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'gtd-backup-' + this.todayStr() + '.json';
+    a.click();
+  }
+
+  renderVals() {
+    var self = this, S = this.state.S, view = this.state.view;
+    var thr = S.settings.waitingAgingDays;
+    var openActions = S.nextActions.filter(function (a) { return !a.done; });
+    var inboxN = S.inbox.length;
+    var d = this.now();
+    var counts = { inbox: inboxN, na: openActions.length, proj: S.projects.filter(function (p) { return !p.done; }).length, wf: S.waitingFor.filter(function (w) { return !w.done; }).length, cal: 0, sm: S.somedayMaybe.length, ref: S.reference.length, review: 0, settings: 0, engage: 0 };
+    var mkNav = function (key, label) {
+      var on = view === key;
+      return {
+        label: label, count: counts[key] || 0, onClick: function () { self.setView(key); },
+        bg: on ? 'var(--color-accent-500)' : 'var(--color-neutral-100)',
+        fg: on ? 'var(--color-bg)' : 'var(--color-neutral-800)',
+        border: on ? 'var(--color-accent-500)' : 'var(--color-divider)',
+        badgeBg: on ? 'var(--color-accent-200)' : 'var(--color-accent-500)',
+        badgeFg: on ? 'var(--color-accent-800)' : 'var(--color-bg)'
+      };
+    };
+
+    /* review chip */
+    var last = S.lastWeeklyReview, n = this.daysSince(last);
+    var chip = { onClick: function () { self.setView('review'); } };
+    if (!last) { chip.label = 'No weekly review yet'; chip.bg = 'var(--color-accent-200)'; chip.fg = 'var(--color-accent-800)'; }
+    else if (n > 7) { chip.label = 'Review overdue — ' + n + 'd'; chip.bg = 'var(--color-accent-300)'; chip.fg = 'var(--color-accent-900)'; }
+    else { chip.label = n === 0 ? 'Reviewed today' : 'Reviewed ' + n + 'd ago'; chip.bg = 'var(--color-accent-2-200)'; chip.fg = 'var(--color-accent-2-800)'; }
+
+    /* engage */
+    var h = d.getHours();
+    var greeting = (h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening') + '.';
+    var today = this.todayStr();
+    var todayEvents = S.calendar.filter(function (c) { return c.date === today; })
+      .sort(function (a, b) { return (a.time || '99') < (b.time || '99') ? -1 : 1; })
+      .map(function (c) { return { time: c.time || 'All day', text: c.text, kind: self.kindLabel(c.kind) }; });
+
+    var filtered = openActions.filter(function (a) { return self.state.ctxFilter === 'All' || a.context === self.state.ctxFilter; });
+    var ctxChips = ['All'].concat(S.settings.contexts).map(function (c) {
+      var on = self.state.ctxFilter === c;
+      var col = c === 'All' ? { bg: 'var(--color-neutral-300)', fg: 'var(--color-neutral-800)', dot: 'var(--color-neutral-600)' } : self.ctxColor(c);
+      return {
+        label: c, dot: col.dot, onClick: function () { self.setState({ ctxFilter: c }); },
+        bg: on ? col.bg : 'var(--color-neutral-100)',
+        fg: on ? col.fg : 'var(--color-neutral-800)',
+        border: on ? 'transparent' : 'var(--color-divider)'
+      };
+    });
+
+    /* suggestion */
+    var sugg = { visible: false };
+    if (this.props.showSuggestion !== false && filtered.length) {
+      var pool = filtered.slice().sort(function (a, b) {
+        var pa = a.projectId ? 0 : 1, pb = b.projectId ? 0 : 1;
+        if (pa !== pb) return pa - pb;
+        return String(a.created) < String(b.created) ? -1 : 1;
+      });
+      var pick = pool[this.state.suggIdx % pool.length];
+      var col = this.ctxColor(pick.context);
+      sugg = {
+        visible: true, text: pick.text || 'Add the physical next action…', ctx: pick.context,
+        ctxBg: col.bg, ctxFg: col.fg,
+        project: pick.projectId ? this.projTitle(pick.projectId) : null,
+        why: pick.projectId ? 'moves a live project forward' : 'oldest open loop in this context',
+        onDo: function () { self.toggleDone('nextActions', pick.id); },
+        onSkip: function () { self.setState({ suggIdx: self.state.suggIdx + 1 }); }
+      };
+    }
+
+    var agedList = S.waitingFor.filter(function (w) { return !w.done && self.daysSince(w.delegated) >= thr; });
+
+    /* next actions by context */
+    var naGroups = S.settings.contexts.map(function (c) {
+      var col = self.ctxColor(c);
+      var items = openActions.filter(function (a) { return a.context === c; });
+      var o = self.state.over;
+      var hot = o && o.kind === 'zone' && o.key === 'ctx:' + c;
+      return {
+        ctx: c, count: items.length, bg: col.bg, fg: col.fg, dot: col.dot,
+        items: items.map(function (a) { return self.actionTile(a); }),
+        empty: items.length === 0,
+        zoneBg: hot ? col.bg : 'var(--color-surface)',
+        zoneEdge: hot ? 'var(--color-accent)' : 'transparent',
+        onDragOver: self.dragOverZone('ctx:' + c), onDrop: self.dropContext(c)
+      };
+    });
+    var otherActions = openActions.filter(function (a) { return S.settings.contexts.indexOf(a.context) < 0; });
+    if (otherActions.length) {
+      naGroups.push({
+        ctx: 'Other', count: otherActions.length, bg: 'var(--color-neutral-300)', fg: 'var(--color-neutral-800)', dot: 'var(--color-neutral-600)',
+        items: otherActions.map(function (a) { return self.actionTile(a); }), empty: false,
+        zoneBg: 'var(--color-surface)', zoneEdge: 'transparent',
+        onDragOver: function () {}, onDrop: function () {}
+      });
+    }
+    var doneActions = S.nextActions.filter(function (a) { return a.done; }).slice(0, 8).map(function (a) {
+      return { text: a.text, onToggle: function () { self.toggleDone('nextActions', a.id); }, onDelete: function () { self.remove('nextActions', a.id); } };
+    });
+
+    /* projects */
+    var projGroups = [['active', 'Active'], ['ondeck', 'On-deck'], ['backlog', 'Backlog']].map(function (g) {
+      var items = S.projects.filter(function (p) { return !p.done && (p.status || 'active') === g[0]; });
+      var o = self.state.over;
+      var hot = o && o.kind === 'zone' && o.key === 'st:' + g[0];
+      return {
+        label: g[1], count: items.length, empty: items.length === 0,
+        zoneBg: hot ? 'var(--color-accent-200)' : 'var(--color-surface)',
+        zoneEdge: hot ? 'var(--color-accent)' : 'transparent',
+        onDragOver: self.dragOverZone('st:' + g[0]), onDrop: self.dropStatus(g[0]),
+        items: items.map(function (p) {
+          var openN = self.openNA(p.id);
+          var stalled = g[0] === 'active' && openN === 0;
+          return Object.assign({
+            title: p.title, outcome: p.outcome || null, stalled: stalled,
+            badge: stalled ? 'No next action' : openN + ' next action' + (openN === 1 ? '' : 's'),
+            badgeBg: stalled ? 'var(--color-accent-300)' : 'var(--color-accent-2-200)',
+            badgeFg: stalled ? 'var(--color-accent-900)' : 'var(--color-accent-2-800)',
+            actions: S.nextActions.filter(function (a) { return a.projectId === p.id && !a.done; }).map(function (a) {
+              return { text: a.text || '—', dot: self.ctxColor(a.context).dot };
+            }),
+            onToggle: function () { self.toggleDone('projects', p.id); },
+            onDelete: function () { self.remove('projects', p.id); },
+            onAddAction: function () { self.setState({ view: 'na', openForm: 'na', form: { fNAproj: String(p.id) } }); }
+          }, self.dragProps('projects', p.id));
+        })
+      };
+    });
+
+    /* waiting for */
+    var wfTiles = S.waitingFor.filter(function (w) { return !w.done; }).map(function (w) {
+      var aged = self.daysSince(w.delegated) >= thr;
+      return Object.assign({
+        what: w.what, who: w.who,
+        age: 'since ' + self.ago(w.delegated) + (aged ? ' · follow up' : ''),
+        tileBg: aged ? 'var(--color-accent-100)' : 'var(--color-neutral-100)',
+        pillBg: aged ? 'var(--color-accent-300)' : 'var(--color-neutral-200)',
+        pillFg: aged ? 'var(--color-accent-900)' : 'var(--color-neutral-800)',
+        onToggle: function () { self.toggleDone('waitingFor', w.id); },
+        onDelete: function () { self.remove('waitingFor', w.id); }
+      }, self.dragProps('waitingFor', w.id));
+    });
+
+    /* calendar */
+    var calTiles = S.calendar.slice().sort(function (a, b) {
+      if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+      return (a.time || '99') < (b.time || '99') ? -1 : 1;
+    }).filter(function (c) { return c.date >= today; }).map(function (c) {
+      var parts = String(c.date).split('-');
+      var dt = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+      return {
+        day: String(dt.getDate()), month: dt.toLocaleDateString(undefined, { month: 'short' }),
+        text: c.text, time: c.time || null, kind: self.kindLabel(c.kind),
+        tileBg: c.date === today ? 'var(--color-accent-2-200)' : 'var(--color-neutral-100)',
+        onDelete: function () { self.remove('calendar', c.id); }
+      };
+    });
+
+    /* someday + reference */
+    var smTiles = S.somedayMaybe.map(function (it) {
+      return Object.assign({
+        text: it.text, age: self.ago(it.created),
+        ctxValue: self.fv('sm_' + it.id, '@Computer'), onCtxChange: self.fset('sm_' + it.id),
+        ctxOptions: self.ctxOpts(),
+        onActivate: function () {
+          var cx = self.fv('sm_' + it.id, '@Computer');
+          self.commit(function (S2) {
+            S2.somedayMaybe = S2.somedayMaybe.filter(function (x) { return x.id !== it.id; });
+            S2.nextActions.unshift({ id: self.nid(), text: it.text, context: cx, projectId: null, created: self.nowIso(), done: false });
+          });
+        },
+        onDelete: function () { self.remove('somedayMaybe', it.id); }
+      }, self.dragProps('somedayMaybe', it.id));
+    });
+    var refTiles = S.reference.map(function (it) {
+      return { text: it.text, age: self.ago(it.created), onDelete: function () { self.remove('reference', it.id); } };
+    });
+
+    /* review */
+    var checked = S.review.checked || {};
+    var all = this.REVIEW.reduce(function (acc, g) { return acc.concat(g[1]); }, []);
+    var doneN = all.filter(function (i) { return checked[i[0]]; }).length;
+    var stalledN = S.projects.filter(function (p) { return !p.done && (p.status || 'active') === 'active' && self.openNA(p.id) === 0; }).length;
+    var reviewGroups = this.REVIEW.map(function (g) {
+      return {
+        label: g[0],
+        items: g[1].map(function (i) {
+          var ck = !!checked[i[0]];
+          var t = { label: i[1], badge: null, actionLabel: null, onAction: function () {} };
+          if (i[0] === 'c_inbox') {
+            t.badge = inboxN ? inboxN + ' to process' : 'zero ✓';
+            if (inboxN) { t.actionLabel = 'Process'; t.onAction = function () { self.setView('inbox'); }; }
+          } else if (i[0] === 'u_proj') {
+            t.badge = stalledN ? stalledN + ' stalled' : 'all have next actions';
+            if (stalledN) { t.actionLabel = 'Review'; t.onAction = function () { self.setView('proj'); }; }
+          } else if (i[0] === 'u_wf') {
+            t.badge = agedList.length ? agedList.length + ' aging' : 'none stalled';
+            if (agedList.length) { t.actionLabel = 'Review'; t.onAction = function () { self.setView('wf'); }; }
+          } else if (i[0] === 'v_someday') {
+            t.badge = S.somedayMaybe.length + ' parked';
+            t.actionLabel = 'Review'; t.onAction = function () { self.setView('sm'); };
+          }
+          var warn = t.badge && /to process|stalled|aging/.test(t.badge);
+          return Object.assign(t, {
+            bg: ck ? 'var(--color-accent-2-100)' : 'var(--color-surface)',
+            cbEdge: ck ? 'var(--color-accent-2-600)' : 'var(--color-neutral-400)',
+            cbBg: ck ? 'var(--color-accent-2-500)' : 'transparent',
+            cbInk: ck ? 'var(--color-bg)' : 'transparent',
+            badgeBg: warn ? 'var(--color-accent-200)' : 'var(--color-neutral-200)',
+            badgeFg: warn ? 'var(--color-accent-800)' : 'var(--color-neutral-800)',
+            onToggle: function () {
+              self.commit(function (S2) {
+                var c = S2.review.checked || {};
+                c[i[0]] = !c[i[0]];
+                S2.review.checked = c;
+              });
+            }
+          });
+        })
+      };
+    });
+
+    /* focus */
+    var focus = { visible: false, empty: false, onExit: function () { self.setState({ focusOn: false, focusIdx: 0 }); } };
+    if (this.state.focusOn) {
+      if (!filtered.length) focus.empty = true;
+      else {
+        var fi = this.state.focusIdx % filtered.length;
+        var fa = filtered[fi];
+        var fc = this.ctxColor(fa.context);
+        focus.visible = true;
+        focus.text = fa.text || 'Add the physical next action…';
+        focus.ctx = fa.context; focus.ctxBg = fc.bg; focus.ctxFg = fc.fg;
+        focus.project = fa.projectId ? this.projTitle(fa.projectId) : null;
+        focus.counter = (fi + 1) + ' of ' + filtered.length + (this.state.ctxFilter === 'All' ? '' : ' in ' + this.state.ctxFilter);
+        focus.onDone = function () { self.toggleDone('nextActions', fa.id); };
+        focus.onSkip = function () { self.setState({ focusIdx: self.state.focusIdx + 1 }); };
+      }
+    }
+
+    /* inbox drop rail */
+    var railZones = [
+      { key: 'someday', label: 'Someday / maybe', bg: 'var(--color-accent-2-100)', fg: 'var(--color-accent-2-800)' },
+      { key: 'reference', label: 'Reference', bg: 'var(--color-neutral-200)', fg: 'var(--color-neutral-800)' },
+      { key: 'trash', label: 'Trash', bg: 'var(--color-accent-100)', fg: 'var(--color-accent-800)' }
+    ].map(function (z) {
+      var o = self.state.over;
+      var hot = o && o.kind === 'zone' && o.key === 'bk:' + z.key;
+      return {
+        label: z.label, bg: hot ? z.bg : 'transparent', fg: z.fg,
+        edge: hot ? 'var(--color-accent)' : 'var(--color-neutral-400)',
+        onDragOver: self.dragOverZone('bk:' + z.key),
+        onDrop: z.key === 'trash'
+          ? function (e) { e.preventDefault(); var dr = self.state.drag; if (dr && dr.list === 'inbox') self.commit(function (S2) { S2.inbox = S2.inbox.filter(function (x) { return x.id !== dr.id; }); }, { drag: null, over: null }); else self.setState({ drag: null, over: null }); }
+          : self.dropBucket(z.key)
+      };
+    });
+
+    var startZero = function () { self.startZero(); };
+
+    var weekOuts = this.weekOutcomes(this.thisWeek());
+
+    return {
+      tileMin: (this.props.tileMinWidth || 270) + 'px',
+      todayLine: d.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }) + (this.TODAY ? ' · test date' : ''),
+      dayBtns: this.dayButtons(today),
+      weekStrip: {
+        items: weekOuts.map(function (o) { return { text: o.text }; }), empty: weekOuts.length === 0,
+        editLabel: weekOuts.length ? 'edit' : 'set outcomes', onEdit: function () { self.openWeek(null); }
+      },
+      todayMove: this.todayMoveLine(today),
+      rt: this.buildRoutine(),
+      fm: this.buildFm(),
+      greeting: greeting,
+      reviewChip: chip,
+      cap: this.state.cap,
+      onCapChange: function (e) { self.setState({ cap: e.target.value }); },
+      onCapKey: function (e) { if (e.key === 'Enter') self.capture(); },
+      onCapture: function () { self.capture(); },
+      onFocus: function () { self.setState({ focusOn: true, focusIdx: 0 }); },
+      navPrimary: [mkNav('engage', 'Engage'), mkNav('inbox', 'Inbox'), mkNav('na', 'Next actions'), mkNav('proj', 'Projects')],
+      navSecondary: [mkNav('wf', 'Waiting for'), mkNav('cal', 'Calendar'), mkNav('sm', 'Someday'), mkNav('ref', 'Reference'), mkNav('review', 'Weekly review'), mkNav('settings', 'Settings')],
+      isEngage: view === 'engage', isInbox: view === 'inbox', isNA: view === 'na', isProj: view === 'proj',
+      isWF: view === 'wf', isCal: view === 'cal', isSM: view === 'sm', isRef: view === 'ref',
+      isReview: view === 'review', isSettings: view === 'settings',
+
+      suggestion: sugg,
+      ctxChips: ctxChips,
+      engageActions: filtered.map(function (a) { return self.actionTile(a); }),
+      engageEmpty: filtered.length === 0,
+      todayEvents: todayEvents, noEvents: todayEvents.length === 0,
+      inboxNudge: {
+        title: inboxN ? inboxN + ' in your inbox' : 'Inbox zero',
+        body: inboxN ? 'Capture is done — now decide what each one means.' : 'Nothing waiting to be clarified.',
+        hasItems: inboxN > 0, onProcess: startZero
+      },
+      agedWaiting: agedList.map(function (w) {
+        return { what: w.what, who: w.who, age: self.ago(w.delegated), onToggle: function () { self.toggleDone('waitingFor', w.id); } };
+      }),
+      hasAgedWaiting: agedList.length > 0,
+
+      wizard: this.buildWizard(),
+      addForm: this.buildAddForm(),
+      inboxList: { visible: !this.state.wz, count: inboxN, empty: inboxN === 0, onProcess: startZero },
+      inboxTiles: S.inbox.map(function (it) {
+        return Object.assign({
+          text: it.text, age: self.ago(it.captured),
+          onClarify: function () { self.setState({ view: 'inbox', wz: { mode: 'single', itemId: it.id, step: 'actionable', draft: {} }, form: {} }); },
+          onDelete: function () { self.remove('inbox', it.id); }
+        }, self.dragProps('inbox', it.id));
+      }),
+      rail: { zones: railZones, opacity: this.state.drag && this.state.drag.list === 'inbox' ? '1' : '0.5' },
+
+      naGroups: naGroups, naDone: doneActions, naDoneCount: doneActions.length,
+      onAddNA: function () { self.setState({ openForm: self.state.openForm === 'na' ? null : 'na', form: {} }); },
+      onAddProj: function () { self.setState({ openForm: self.state.openForm === 'proj' ? null : 'proj', form: {} }); },
+      onAddWF: function () { self.setState({ openForm: self.state.openForm === 'wf' ? null : 'wf', form: {} }); },
+      onAddCal: function () { self.setState({ openForm: self.state.openForm === 'cal' ? null : 'cal', form: {} }); },
+      onAddSM: function () { self.setState({ openForm: self.state.openForm === 'sm' ? null : 'sm', form: {} }); },
+      onAddRef: function () { self.setState({ openForm: self.state.openForm === 'ref' ? null : 'ref', form: {} }); },
+
+      projGroups: projGroups,
+      wfTiles: wfTiles, wfEmpty: wfTiles.length === 0, threshold: thr,
+      calTiles: calTiles, calEmpty: calTiles.length === 0,
+      smTiles: smTiles, smEmpty: smTiles.length === 0,
+      refTiles: refTiles, refEmpty: refTiles.length === 0,
+
+      reviewGroups: reviewGroups, reviewDoneN: doneN, reviewTotal: all.length,
+      reviewPct: Math.round(doneN / all.length * 100) + '%',
+      reviewPulse: doneN === all.length ? 'breathe 1.8s ease-in-out infinite' : 'none',
+      reviewWhen: last ? (this.daysSince(last) === 0 ? 'today' : this.daysSince(last) + ' day' + (this.daysSince(last) > 1 ? 's' : '') + ' ago') : 'never yet',
+      reviewBanner: this.state.justReviewed,
+      onCompleteReview: function () {
+        self.commit(function (S2) { S2.lastWeeklyReview = self.nowIso(); S2.review = { checked: {} }; }, { justReviewed: true });
+      },
+
+      thresholdValue: String(thr),
+      thresholdOptions: [3, 5, 7, 14, 30].map(function (v) { return { value: String(v), label: v + ' days' }; }),
+      onThreshold: function (e) { var v = +e.target.value; self.commit(function (S2) { S2.settings.waitingAgingDays = v; }); },
+      ctxTags: S.settings.contexts.map(function (c) {
+        var col = self.ctxColor(c);
+        return { label: c, bg: col.bg, fg: col.fg, onRemove: function () { self.commit(function (S2) { S2.settings.contexts = S2.settings.contexts.filter(function (x) { return x !== c; }); }); } };
+      }),
+      ctxNew: this.state.ctxNew,
+      onCtxNewChange: function (e) { self.setState({ ctxNew: e.target.value }); },
+      onCtxNewKey: function (e) { if (e.key === 'Enter') self.addContext(); },
+      onAddContext: function () { self.addContext(); },
+      onExport: function () { self.exportData(); },
+      onImport: function (e) { self.onImportFile(e); },
+      focus: focus
+    };
+  }
+
+  addContext() {
+    var v = (this.state.ctxNew || '').trim();
+    if (!v) return;
+    if (v[0] !== '@') v = '@' + v;
+    this.commit(function (S) {
+      if (S.settings.contexts.indexOf(v) < 0) S.settings.contexts.push(v);
+    }, { ctxNew: '' });
+  }
+}
+</script>
+
+
+</body></html>
