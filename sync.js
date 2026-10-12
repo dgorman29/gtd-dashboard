@@ -160,7 +160,7 @@
   function signIn() {
     return new Promise(function (resolve) {
       var wrap = document.createElement('div');
-      wrap.setAttribute('style', 'position:fixed;inset:0;z-index:10003;background:#faf9f5;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;');
+      wrap.setAttribute('style', 'position:fixed;inset:0;z-index:10003;background:#f5ead8;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;');
       wrap.innerHTML =
         '<form style="background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.1);width:min(340px,calc(100vw - 32px));display:flex;flex-direction:column;gap:12px">' +
         '<h2 style="font-size:18px;color:#333">GTD Dashboard</h2>' +
