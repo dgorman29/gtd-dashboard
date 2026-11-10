@@ -710,6 +710,9 @@ a:hover{color:var(--color-accent)}
                   <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:var(--color-neutral-200);color:var(--color-neutral-800)">{{ a.project }}</span>
                 </sc-if>
                 <span style="margin-left:auto;font-size:11px;color:var(--color-neutral-600)">{{ a.age }}</span>
+                <sc-if value="{{ a.canPromote }}" hint-placeholder-val="{{ false }}">
+                  <button sc-camel-on-click="{{ a.onPromote }}" title="Promote to project — this needs more than one step" style="border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-700);cursor:pointer;font-family:var(--font-body);font-size:11px;padding:2px 9px;border-radius:7px" style-hover="color:var(--color-accent-700);border-color:var(--color-accent-300)">→ Project</button>
+                </sc-if>
               </div>
             </div>
           </sc-for>
@@ -903,6 +906,9 @@ a:hover{color:var(--color-accent)}
                     <span style="font-size:11px;padding:3px 10px;border-radius:7px;background:var(--color-neutral-200);color:var(--color-neutral-800)">{{ a.project }}</span>
                   </sc-if>
                   <span style="margin-left:auto;font-size:11px;color:var(--color-neutral-600)">{{ a.age }}</span>
+                  <sc-if value="{{ a.canPromote }}" hint-placeholder-val="{{ false }}">
+                    <button sc-camel-on-click="{{ a.onPromote }}" title="Promote to project — this needs more than one step" style="border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-700);cursor:pointer;font-family:var(--font-body);font-size:11px;padding:2px 9px;border-radius:7px" style-hover="color:var(--color-accent-700);border-color:var(--color-accent-300)">→ Project</button>
+                  </sc-if>
                 </div>
               </div>
             </sc-for>
@@ -1959,6 +1965,35 @@ class Component extends DCLogic {
         var st = self.fv('fPstatus', 'active'), out = (self.fv('fPout', '') || '').trim();
         self.commit(function (S) { S.projects.unshift({ id: self.nid(), title: t, status: st, outcome: out, created: self.nowIso(), done: false }); }, { openForm: null, form: {} });
       };
+    } else if (k === 'promote') {
+      var aid = this.state.form.fPRaid, src = this.byId('nextActions', aid);
+      if (!src) return { visible: false, fields: [] };
+      f.title = 'Promote to project';
+      f.submitLabel = 'Create project';
+      f.fields = [
+        this.field('fPRtitle', 'Outcome / project name', src.text, { placeholder: 'What does done look like?' }),
+        this.field('fPRstatus', 'Status', 'active', { kind: 'select', options: [{ value: 'active', label: 'Active' }, { value: 'ondeck', label: 'On-deck' }, { value: 'backlog', label: 'Backlog' }] }),
+        this.field('fPRout', 'Success looks like (optional)', '', { placeholder: 'Outcome note' }),
+        this.field('fPRnext', 'Next action (blank = none yet)', src.text, { placeholder: 'The very next physical step…' }),
+        this.field('fPRctx', 'Context', src.context, { kind: 'select', options: this.ctxOpts() })
+      ];
+      f.onSubmit = function () {
+        var t = (self.fv('fPRtitle', src.text) || '').trim();
+        if (!t) return;
+        var st = self.fv('fPRstatus', 'active'), out = (self.fv('fPRout', '') || '').trim();
+        var next = (self.fv('fPRnext', src.text) || '').trim(), ctx = self.fv('fPRctx', src.context);
+        self.commit(function (S) {
+          var pid = self.nid();
+          S.projects.unshift({ id: pid, title: t, status: st, outcome: out, created: self.nowIso(), done: false });
+          // Keep the same action record (and its id) so daily-routine links survive; drop it if no next action was given.
+          if (next) {
+            var a = S.nextActions.find(function (x) { return x.id === aid; });
+            if (a) { a.text = next; a.context = ctx; a.projectId = pid; }
+          } else {
+            S.nextActions = S.nextActions.filter(function (x) { return x.id !== aid; });
+          }
+        }, { openForm: null, form: {} });
+      };
     } else if (k === 'wf') {
       f.title = 'New waiting-for item';
       f.fields = [this.field('fWwho', 'Who', '', { placeholder: 'Name' }), this.field('fWwhat', 'What', '', { placeholder: "What you're waiting on" })];
@@ -2022,6 +2057,11 @@ class Component extends DCLogic {
       cbEdge: a.done ? 'var(--color-accent-2-600)' : 'var(--color-neutral-400)',
       cbBg: a.done ? 'var(--color-accent-2-500)' : 'transparent',
       cbInk: a.done ? 'var(--color-bg)' : 'transparent',
+      canPromote: !a.done && !a.projectId,
+      onPromote: function () {
+        self.setState({ openForm: 'promote', form: { fPRaid: a.id } });
+        if (typeof window !== 'undefined') window.scrollTo(0, 0);
+      },
       onToggle: function () { self.toggleDone('nextActions', a.id); },
       onDelete: function () { self.remove('nextActions', a.id); }
     }, this.dragProps('nextActions', a.id));
